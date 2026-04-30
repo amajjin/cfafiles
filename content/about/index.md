@@ -14,4 +14,4 @@ Some entries will be useful. Some will be small things that only make sense once
 
 If you have something to share or correct, the comments are open.
 
-— JJ in Newfoundland
+— J
