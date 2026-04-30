@@ -1,0 +1,39 @@
+name: Notion to Hugo
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install notion-to-md
+        run: npm install @notionhq/client@2.2.15 notion-to-md@3.1.1
+
+      - name: Sync Notion to Hugo
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: node sync.js
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add content/posts/
+          git diff --staged --quiet || git commit -m "Sync posts from Notion"
+          git pull --rebase origin main
+          git push
