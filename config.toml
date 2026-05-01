@@ -1,5 +1,5 @@
 # https://hugodoit.pages.dev/theme-documentation-basics/#basic-configuration
-baseURL = "https://cfafiles.pages.dev"
+baseURL = "https://newfoundlandsaga.com"
 
 canonifyURLs = false
 relativeURLs = false
