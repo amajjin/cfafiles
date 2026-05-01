@@ -232,10 +232,10 @@ enableEmoji = true
     enable = false
 
   [params.page.comment]
-    enable = false
+    enable = true
     [params.page.comment.disqus]
-      enable = false
-      shortname = ""
+      enable = true
+      shortname = "cfa-files"
 
   [params.page.library]
     [params.page.library.css]
