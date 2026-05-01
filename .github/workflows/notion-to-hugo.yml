@@ -41,5 +41,3 @@ jobs:
           git rebase --continue
           git pull --rebase origin main
             git push
-
-          - name: Commit and Push
