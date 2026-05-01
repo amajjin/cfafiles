@@ -19,7 +19,7 @@ enableEmoji = true
     post = ""
     name = "Posts"
     url = "/posts/"
-    title = "The CFA Files"
+    title = "Newfoundland Saga"
     weight = 1
   [[menu.main]]
     identifier = "tags"
@@ -65,7 +65,7 @@ enableEmoji = true
     weight     = 6
 
 [params]
-  title = "The CFA Files"
+  title = "Newfoundland Saga"
   description = "A Come From Away's guide to Newfoundland"
   keywords = ["Newfoundland", "Immigration", "CFA", "Come From Away", "NL"]
   version = "0.3.X"
@@ -135,7 +135,7 @@ enableEmoji = true
     enable = true
     gravatarEmail = ""
     avatarURL = ""
-    title = "The CFA Files"
+    title = "Newfoundland Saga"
     subtitle = "A Come From Away's guide to Newfoundland"
     typeit = false
     social = true
@@ -244,7 +244,7 @@ enableEmoji = true
   [params.page.seo]
     images = []
     [params.page.seo.publisher]
-      name    = "The CFA Files"
+      name    = "Newfoundland Saga"
       logoUrl = ""
 
   [params.page.related]
