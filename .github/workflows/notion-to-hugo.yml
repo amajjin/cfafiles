@@ -11,28 +11,25 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install notion-to-md
+      - name: Install dependencies
         run: npm install @notionhq/client@2.2.15 notion-to-md@3.1.1
-
-      - name: Make sure branch is up to date
-        run: |
-          git fetch origin main
-          git reset --hard origin/main
 
       - name: Clean posts directory
         run: |
-          rm -rf content/posts/*.md
+          rm -rf content/posts/*
           mkdir -p content/posts
 
       - name: Sync Notion to Hugo
@@ -41,10 +38,27 @@ jobs:
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: node sync.js
 
+      - name: Show generated files
+        run: |
+          echo "Generated files:"
+          find content/posts -type f -maxdepth 3
+          echo "Git status:"
+          git status --short
+
       - name: Commit and Push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add content/posts/
-          git diff --staged --quiet || git commit -m "Sync posts from Notion"
-          git push
+
+          git add -A
+
+          echo "Staged files:"
+          git diff --staged --name-only
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync posts from Notion"
+            git pull --rebase origin main
+            git push origin main
+          fi
