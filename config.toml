@@ -319,7 +319,7 @@ enableEmoji = true
     ignoreFieldNorm = false
 
 [params.author]
-  name  = "JJ in Newfoundland"
+  name  = "J. Jin"
   email = ""
   link  = "https://github.com/amajjin"
   gravatarEmail = ""
