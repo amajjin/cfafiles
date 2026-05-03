@@ -627,6 +627,16 @@
   </p>
 </div>
 
+<!-- DEBUG - 확인 후 제거 -->
+<div style="background:#fff3cd; padding:1rem 4rem; font-family:monospace; font-size:0.85rem; border-bottom:1px solid #ffc107;">
+  Site title: {{ .Site.Title }}<br>
+  Total RegularPages: {{ len .Site.RegularPages }}<br>
+  Total AllPages: {{ len .Site.AllPages }}<br>
+  {{ range .Site.RegularPages }}
+  - {{ .Title }} (Section: {{ .Section }}, Kind: {{ .Kind }})<br>
+  {{ end }}
+</div>
+
 <!-- TOPICS GRID -->
 <section class="topics-section">
   <div class="topics-grid">
