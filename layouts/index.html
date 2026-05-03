@@ -669,36 +669,24 @@
 <section class="featured-section">
   <div class="section-header">
     <span class="section-title">Recent posts</span>
-    <a href="/blog" class="section-link">All posts →</a>
+    <a href="/posts/" class="section-link">All posts →</a>
   </div>
 
   <div class="posts-list">
-    <a href="/blog/mummering-explained" class="post-item">
-      <span class="post-num">01</span>
+    {{ $counter := 0 }}
+    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+    {{ $counter = add $counter 1 }}
+    <a href="{{ .Permalink }}" class="post-item">
+      <span class="post-num">{{ printf "%02d" $counter }}</span>
       <div>
-        <p class="post-title">Mummering Explained</p>
-        <p class="post-excerpt">The strangest tradition you've never heard of — and why it makes perfect sense once you've survived a NL winter.</p>
+        <p class="post-title">{{ .Title }}</p>
+        <p class="post-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
       </div>
-      <span class="post-tag">Culture</span>
+      {{ with .Params.categories }}
+      <span class="post-tag">{{ index . 0 }}</span>
+      {{ end }}
     </a>
-
-    <a href="/blog/renting-in-st-johns" class="post-item">
-      <span class="post-num">02</span>
-      <div>
-        <p class="post-title">Renting in St. John's: What They Don't Tell You</p>
-        <p class="post-excerpt">Heat is not always included. Parking matters more than you think. And "close to MUN" means different things to different landlords.</p>
-      </div>
-      <span class="post-tag">Live Here</span>
-    </a>
-
-    <a href="/blog/torbakery" class="post-item">
-      <span class="post-num">03</span>
-      <div>
-        <p class="post-title">Torbakery: Bread Worth the Drive</p>
-        <p class="post-excerpt">A small operation in Torbay doing something quietly extraordinary. The kind of place you stop telling people about to keep it manageable.</p>
-      </div>
-      <span class="post-tag">Eat &amp; Drink</span>
-    </a>
+    {{ end }}
   </div>
 </section>
 

@@ -663,36 +663,24 @@
 <section class="featured-section">
   <div class="section-header">
     <span class="section-title">최근 글</span>
-    <a href="/ko/blog" class="section-link">모든 글 →</a>
+    <a href="/ko/posts/" class="section-link">모든 글 →</a>
   </div>
 
   <div class="posts-list">
-    <a href="/ko/blog/mummering-explained" class="post-item">
-      <span class="post-num">01</span>
+    {{ $counter := 0 }}
+    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
+    {{ $counter = add $counter 1 }}
+    <a href="{{ .Permalink }}" class="post-item">
+      <span class="post-num">{{ printf "%02d" $counter }}</span>
       <div>
-        <p class="post-title">머머링, 설명되지 않는 전통</p>
-        <p class="post-excerpt">한 번도 들어본 적 없는, 가장 이상한 전통. 뉴펀들랜드의 겨울을 한 번이라도 견뎌보면 왜 이런 풍습이 생겼는지 이해하게 됩니다.</p>
+        <p class="post-title">{{ .Title }}</p>
+        <p class="post-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
       </div>
-      <span class="post-tag">문화</span>
+      {{ with .Params.categories }}
+      <span class="post-tag">{{ index . 0 }}</span>
+      {{ end }}
     </a>
-
-    <a href="/ko/blog/renting-in-st-johns" class="post-item">
-      <span class="post-num">02</span>
-      <div>
-        <p class="post-title">세인트존스에서 집 구하기, 아무도 말해주지 않은 것들</p>
-        <p class="post-excerpt">난방비가 포함되지 않을 수도 있습니다. 주차는 생각보다 중요합니다. 그리고 "MUN에서 가깝다"는 말은 사람마다 다르게 쓰입니다.</p>
-      </div>
-      <span class="post-tag">생활</span>
-    </a>
-
-    <a href="/ko/blog/torbakery" class="post-item">
-      <span class="post-num">03</span>
-      <div>
-        <p class="post-title">토베이커리, 운전해서 갈 만한 빵</p>
-        <p class="post-excerpt">토베이라는 작은 마을에서 조용히 비범한 일이 벌어지고 있습니다. 너무 많이 알려지지 않기를 바라며 사람들에게 말하지 않게 되는 그런 곳.</p>
-      </div>
-      <span class="post-tag">먹고 마시기</span>
-    </a>
+    {{ end }}
   </div>
 </section>
 
