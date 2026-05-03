@@ -637,18 +637,19 @@
   {{ end }}
 </div>
 
-<!-- TOPICS GRID -->
+  <!-- TOPICS GRID -->
 <section class="topics-section">
   <div class="topics-grid">
-    {{ range $index, $cat := .Site.Taxonomies.categories }}
-    <a href="{{ .Page.Permalink }}" class="topic-card">
+    {{ range $index, $cat := .Site.Taxonomies.categories.ByCount }}
+    <a href="{{ $cat.Page.Permalink }}" class="topic-card">
       <p class="topic-number">{{ printf "%02d" (add $index 1) }}</p>
-      <h2 class="topic-title">{{ .Page.Title }}</h2>
-      <p class="topic-desc">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</p>
+      <h2 class="topic-title">{{ $cat.Page.Title }}</h2>
+      <p class="topic-desc">{{ len $cat.Pages }} {{ if eq (len $cat.Pages) 1 }}post{{ else }}posts{{ end }}</p>
     </a>
     {{ end }}
   </div>
 </section>
+  
 
 <!-- FEATURED POSTS -->
 <section class="featured-section">
