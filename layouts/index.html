@@ -630,11 +630,9 @@
 <!-- TOPICS GRID -->
 <section class="topics-section">
   <div class="topics-grid">
-    {{ $counter := 0 }}
-    {{ range .Site.Taxonomies.categories }}
-    {{ $counter = add $counter 1 }}
+    {{ range $index, $cat := .Site.Taxonomies.categories }}
     <a href="{{ .Page.Permalink }}" class="topic-card">
-      <p class="topic-number">{{ printf "%02d" $counter }}</p>
+      <p class="topic-number">{{ printf "%02d" (add $index 1) }}</p>
       <h2 class="topic-title">{{ .Page.Title }}</h2>
       <p class="topic-desc">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</p>
     </a>
@@ -650,16 +648,14 @@
   </div>
 
   <div class="posts-list">
-    {{ $counter := 0 }}
-    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
-    {{ $counter = add $counter 1 }}
-    <a href="{{ .Permalink }}" class="post-item">
-      <span class="post-num">{{ printf "%02d" $counter }}</span>
+    {{ range $index, $page := first 5 (where .Site.RegularPages "Section" "posts") }}
+    <a href="{{ $page.Permalink }}" class="post-item">
+      <span class="post-num">{{ printf "%02d" (add $index 1) }}</span>
       <div>
-        <p class="post-title">{{ .Title }}</p>
-        <p class="post-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
+        <p class="post-title">{{ $page.Title }}</p>
+        <p class="post-excerpt">{{ $page.Summary | plainify | truncate 120 }}</p>
       </div>
-      {{ with .Params.categories }}
+      {{ with $page.Params.categories }}
       <span class="post-tag">{{ index . 0 }}</span>
       {{ end }}
     </a>
