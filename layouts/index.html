@@ -627,30 +627,25 @@
   </p>
 </div>
 
-<!-- DEBUG - 확인 후 제거 -->
-<div style="background:#fff3cd; padding:1rem 4rem; font-family:monospace; font-size:0.85rem; border-bottom:1px solid #ffc107;">
-  Site title: {{ .Site.Title }}<br>
-  Total RegularPages: {{ len .Site.RegularPages }}<br>
-  Total AllPages: {{ len .Site.AllPages }}<br>
-  {{ range .Site.RegularPages }}
-  - {{ .Title }} (Section: {{ .Section }}, Kind: {{ .Kind }})<br>
-  {{ end }}
-</div>
-
-  <!-- TOPICS GRID -->
+<!-- TOPICS GRID -->
 <section class="topics-section">
   <div class="topics-grid">
-    {{ range $index, $cat := .Site.Taxonomies.categories.ByCount }}
-    <a href="{{ $cat.Page.Permalink }}" class="topic-card">
-      <p class="topic-number">{{ printf "%02d" (add $index 1) }}</p>
-      <h2 class="topic-title">{{ $cat.Page.Title }}</h2>
-      <p class="topic-desc">{{ len $cat.Pages }} {{ if eq (len $cat.Pages) 1 }}post{{ else }}posts{{ end }}</p>
-    </a>
+    {{ with .Site.Taxonomies.categories }}
+      {{ range $index, $cat := .ByCount }}
+      <a href="{{ $cat.Page.RelPermalink }}" class="topic-card">
+        <p class="topic-number">{{ printf "%02d" (add $index 1) }}</p>
+        <h2 class="topic-title">{{ $cat.Page.Title }}</h2>
+        <p class="topic-desc">
+          {{ len $cat.Pages }} {{ if eq (len $cat.Pages) 1 }}post{{ else }}posts{{ end }}
+        </p>
+      </a>
+      {{ end }}
     {{ end }}
   </div>
 </section>
   
 
+<!-- FEATURED POSTS -->
 <!-- FEATURED POSTS -->
 <section class="featured-section">
   <div class="section-header">
@@ -660,7 +655,7 @@
 
   <div class="posts-list">
     {{ range $index, $page := first 5 (where .Site.RegularPages "Section" "posts") }}
-    <a href="{{ $page.Permalink }}" class="post-item">
+    <a href="{{ $page.RelPermalink }}" class="post-item">
       <span class="post-num">{{ printf "%02d" (add $index 1) }}</span>
       <div>
         <p class="post-title">{{ $page.Title }}</p>
