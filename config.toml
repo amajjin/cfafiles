@@ -6,73 +6,52 @@ relativeURLs = false
 
 defaultContentLanguage = "en"
 
-
 [languages]
   [languages.en]
     languageName = "English"
     weight = 1
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      name = "Posts"
+      url = "/posts/"
+      title = "All Posts"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      name = "Categories"
+      url = "/categories/"
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 3
+
   [languages.ko]
     languageName = "한국어"
     weight = 2
-    
+    [[languages.ko.menu.main]]
+      identifier = "posts"
+      name = "글 목록"
+      url = "/ko/posts/"
+      weight = 1
+    [[languages.ko.menu.main]]
+      identifier = "categories"
+      name = "카테고리"
+      url = "/ko/categories/"
+      weight = 2
+    [[languages.ko.menu.main]]
+      identifier = "about"
+      name = "소개"
+      url = "/ko/about/"
+      weight = 3
+
 languageCode = "en"
 theme = "DoIt"
 
 enableRobotsTXT = true
 enableGitInfo = true
 enableEmoji = true
-
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    pre = ""
-    post = ""
-    name = "Posts"
-    url = "/posts/"
-    title = "Newfoundland Saga"
-    weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
-    weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "Categories"
-    url = "/categories/"
-    title = ""
-    weight = 3
-  [[menu.main]]
-    identifier = "series"
-    pre        = ""
-    post       = ""
-    name       = "Series"
-    url        = "series/"
-    title      = ""
-    weight     = 4
-
-  [[menu.main]]
-    identifier = "about"
-    pre        = ""
-    post       = ""
-    name       = "About"
-    url        = "about/"
-    title      = ""
-    weight     = 5
-
-  [[menu.main]]
-    identifier = "github"
-    pre        = "<i class='fab fa-github fa-fw'></i>"
-    post       = ""
-    name       = ""
-    url        = "https://github.com/amajjin/cfafiles"
-    title      = "GitHub"
-    weight     = 6
 
 [params]
   title = "Newfoundland Saga"
@@ -93,7 +72,7 @@ enableEmoji = true
   license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
 [params.app]
-  title = "The CFA Files"
+  title = "Newfoundland Saga"
   noFavicon = false
   svgFavicon = ""
   themeColor = "#ffffff"
@@ -142,7 +121,7 @@ enableEmoji = true
 [params.home]
   rss = 10
   [params.home.profile]
-    enable = true
+    enable = false
     gravatarEmail = ""
     avatarURL = ""
     title = "Newfoundland Saga"
@@ -151,7 +130,7 @@ enableEmoji = true
     social = true
     disclaimer = ""
   [params.home.posts]
-    enable = true
+    enable = false
     paginate = 10
 
 [params.social]
