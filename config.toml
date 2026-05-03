@@ -5,6 +5,16 @@ canonifyURLs = false
 relativeURLs = false
 
 defaultContentLanguage = "en"
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+  [languages.ko]
+    languageName = "한국어"
+    weight = 2
+    
 languageCode = "en"
 theme = "DoIt"
 
