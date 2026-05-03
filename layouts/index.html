@@ -579,13 +579,11 @@
 <nav>
   <a href="/" class="nav-logo">Newfoundland Saga</a>
   <ul class="nav-links">
-    <li><a href="/live-here">Live Here</a></li>
-    <li><a href="/history">History</a></li>
-    <li><a href="/eat-drink">Eat & Drink</a></li>
-    <li><a href="/places">Places</a></li>
-    <li><a href="/about">About</a></li>
+    <li><a href="/posts/">Posts</a></li>
+    <li><a href="/categories/">Categories</a></li>
+    <li><a href="/about/">About</a></li>
   </ul>
-  <a href="/ko" class="nav-lang">한국어</a>
+  <a href="/ko/" class="nav-lang">한국어</a>
 </nav>
 
 <!-- HERO -->
@@ -600,8 +598,8 @@
       Nobody warned you. We will. An honest guide to living on The Rock — written by someone who came from away too.
     </p>
     <div class="hero-cta-group">
-      <a href="/live-here" class="btn-primary">Start Here</a>
-      <a href="/about" class="btn-secondary">Who writes this?</a>
+      <a href="/posts/" class="btn-primary">Start Reading</a>
+      <a href="/about/" class="btn-secondary">Who writes this?</a>
     </div>
   </div>
 
@@ -632,36 +630,15 @@
 <!-- TOPICS GRID -->
 <section class="topics-section">
   <div class="topics-grid">
-    <a href="/live-here" class="topic-card">
-      <p class="topic-number">01</p>
-      <h2 class="topic-title">Living Here</h2>
-      <p class="topic-desc">Rent, utilities, heating costs, transit, neighbourhoods — what the city website doesn't say out loud.</p>
+    {{ $counter := 0 }}
+    {{ range .Site.Taxonomies.categories }}
+    {{ $counter = add $counter 1 }}
+    <a href="{{ .Page.Permalink }}" class="topic-card">
+      <p class="topic-number">{{ printf "%02d" $counter }}</p>
+      <h2 class="topic-title">{{ .Page.Title }}</h2>
+      <p class="topic-desc">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</p>
     </a>
-    <a href="/history" class="topic-card">
-      <p class="topic-number">02</p>
-      <h2 class="topic-title">History</h2>
-      <p class="topic-desc">The cod moratorium. Confederation. Why Newfoundlanders still think of themselves as something apart.</p>
-    </a>
-    <a href="/eat-drink" class="topic-card">
-      <p class="topic-number">03</p>
-      <h2 class="topic-title">Eat &amp; Drink</h2>
-      <p class="topic-desc">Salt fish, toutons, Screech, and the one bakery worth the line. Where to eat before you spend a month missing it.</p>
-    </a>
-    <a href="/places" class="topic-card">
-      <p class="topic-number">04</p>
-      <h2 class="topic-title">Places</h2>
-      <p class="topic-desc">Signal Hill in November. Cape St. Mary's in fog. The places that make you understand why people stay.</p>
-    </a>
-    <a href="/fish-and-sea" class="topic-card">
-      <p class="topic-number">05</p>
-      <h2 class="topic-title">Fish &amp; Sea</h2>
-      <p class="topic-desc">The capelin roll. Iceberg season. The collapse that changed everything. The ocean is never background here.</p>
-    </a>
-    <a href="/people" class="topic-card">
-      <p class="topic-number">06</p>
-      <h2 class="topic-title">People</h2>
-      <p class="topic-desc">MUN students, Newfies, CFAs — and what those distinctions actually mean at a kitchen party.</p>
-    </a>
+    {{ end }}
   </div>
 </section>
 
@@ -701,7 +678,7 @@
     <p class="about-body">
       No sponsorships. No tourism board partnerships. Just what it's actually like to live here.
     </p>
-    <a href="/about" class="btn-secondary">Read more about the author</a>
+    <a href="/about/" class="btn-secondary">Read more about the author</a>
   </div>
 
   <div class="about-aside">
@@ -720,8 +697,8 @@
   </div>
   <ul class="footer-links">
     <li><a href="/ko">한국어</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/blog">Archive</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/posts/">Archive</a></li>
   </ul>
 </footer>
 

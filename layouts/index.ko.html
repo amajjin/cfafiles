@@ -571,13 +571,11 @@
 
 <!-- NAV -->
 <nav>
-  <a href="/ko" class="nav-logo">뉴펀들랜드 사가</a>
+  <a href="/ko/" class="nav-logo">뉴펀들랜드 사가</a>
   <ul class="nav-links">
-    <li><a href="/ko/live-here">생활</a></li>
-    <li><a href="/ko/history">역사</a></li>
-    <li><a href="/ko/eat-drink">먹고 마시기</a></li>
-    <li><a href="/ko/places">장소</a></li>
-    <li><a href="/ko/about">소개</a></li>
+    <li><a href="/ko/posts/">글 목록</a></li>
+    <li><a href="/ko/categories/">카테고리</a></li>
+    <li><a href="/ko/about/">소개</a></li>
   </ul>
   <a href="/" class="nav-lang">EN</a>
 </nav>
@@ -594,8 +592,8 @@
       아무도 알려주지 않은 것들. 이 섬에서 실제로 살아본 사람이 쓰는, 솔직한 안내서.
     </p>
     <div class="hero-cta-group">
-      <a href="/ko/live-here" class="btn-primary">여기서 시작하기</a>
-      <a href="/ko/about" class="btn-secondary">이 글을 쓰는 사람</a>
+      <a href="/ko/posts/" class="btn-primary">글 읽기</a>
+      <a href="/ko/about/" class="btn-secondary">이 글을 쓰는 사람</a>
     </div>
   </div>
 
@@ -626,36 +624,15 @@
 <!-- TOPICS GRID -->
 <section class="topics-section">
   <div class="topics-grid">
-    <a href="/ko/live-here" class="topic-card">
-      <p class="topic-number">01</p>
-      <h2 class="topic-title">이곳에서 산다는 것</h2>
-      <p class="topic-desc">집세, 공과금, 난방비, 교통, 동네 — 시청 홈페이지에는 적혀 있지 않은 이야기들.</p>
+    {{ $counter := 0 }}
+    {{ range .Site.Taxonomies.categories }}
+    {{ $counter = add $counter 1 }}
+    <a href="{{ .Page.Permalink }}" class="topic-card">
+      <p class="topic-number">{{ printf "%02d" $counter }}</p>
+      <h2 class="topic-title">{{ .Page.Title }}</h2>
+      <p class="topic-desc">{{ len .Pages }}개의 글</p>
     </a>
-    <a href="/ko/history" class="topic-card">
-      <p class="topic-number">02</p>
-      <h2 class="topic-title">역사</h2>
-      <p class="topic-desc">대구 모라토리엄. 캐나다 연방 가입. 뉴펀들랜드 사람들이 여전히 자신을 별개의 존재로 여기는 이유.</p>
-    </a>
-    <a href="/ko/eat-drink" class="topic-card">
-      <p class="topic-number">03</p>
-      <h2 class="topic-title">먹고 마시기</h2>
-      <p class="topic-desc">소금 대구, 토우튼, 스크리치, 그리고 줄 설 만한 빵집. 떠나기 전에 한 번은 먹어봐야 할 것들.</p>
-    </a>
-    <a href="/ko/places" class="topic-card">
-      <p class="topic-number">04</p>
-      <h2 class="topic-title">장소</h2>
-      <p class="topic-desc">11월의 시그널 힐. 안개 속의 케이프 세인트 메리. 사람들이 왜 떠나지 않는지 알게 되는 곳들.</p>
-    </a>
-    <a href="/ko/fish-and-sea" class="topic-card">
-      <p class="topic-number">05</p>
-      <h2 class="topic-title">물고기와 바다</h2>
-      <p class="topic-desc">케이플린이 해안으로 몰려오는 계절. 빙산이 떠다니는 봄. 모든 것을 바꾼 어업 붕괴. 여기서 바다는 결코 배경이 아닙니다.</p>
-    </a>
-    <a href="/ko/people" class="topic-card">
-      <p class="topic-number">06</p>
-      <h2 class="topic-title">사람들</h2>
-      <p class="topic-desc">MUN 학생, 뉴피, 외지인 — 그리고 이 구분이 키친파티에서 실제로 어떻게 작동하는지.</p>
-    </a>
+    {{ end }}
   </div>
 </section>
 
@@ -695,7 +672,7 @@
     <p class="about-body">
       광고도, 관광청 협찬도 없습니다. 그저 이곳에서 산다는 것이 실제로 어떤 것인지에 대한 이야기.
     </p>
-    <a href="/ko/about" class="btn-secondary">필자 소개 더 읽기</a>
+    <a href="/ko/about/" class="btn-secondary">필자 소개 더 읽기</a>
   </div>
 
   <div class="about-aside">
@@ -714,8 +691,8 @@
   </div>
   <ul class="footer-links">
     <li><a href="/">English</a></li>
-    <li><a href="/ko/about">소개</a></li>
-    <li><a href="/ko/blog">전체 글</a></li>
+    <li><a href="/ko/about/">소개</a></li>
+    <li><a href="/ko/posts/">전체 글</a></li>
   </ul>
 </footer>
 
