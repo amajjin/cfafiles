@@ -2,31 +2,17 @@
    Safe custom home layout using layouts/partials/home_info.html
 */
 
-/* Fonts from the original landing page */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=Noto+Serif+KR:wght@300;400;500;700&display=swap');
 
 :root {
   --ns-fog: #e8e6e1;
   --ns-rock: #2a2824;
   --ns-slate: #4a4844;
-  --ns-mist: #b8b4ac;
+  --ns-mist: #9d978d;
   --ns-sea: #2d4a5a;
-  --ns-rust: #8b4a2a;
   --ns-cream: #f5f2ec;
   --ns-white: #faf9f6;
-}
-
-/* Connect custom landing colours to PaperMod theme colours */
-body.dark,
-.dark,
-[data-theme="dark"] {
-  --ns-rock: var(--primary);
-  --ns-slate: var(--secondary);
-  --ns-mist: var(--tertiary);
-  --ns-sea: #9fc7dc;
-  --ns-cream: var(--theme);
-  --ns-white: var(--theme);
-  --ns-fog: var(--border);
 }
 
 /* Let the PaperMod home page use the full width */
@@ -74,10 +60,7 @@ html[lang="ko"] .ns-about,
   width: 100vw;
   min-height: 86vh;
   display: grid;
-
-  /* Near-half image layout, but text still gets enough room */
   grid-template-columns: minmax(0, 52vw) minmax(420px, 48vw);
-
   margin: 1.5rem calc(50% - 50vw) 4rem;
   overflow: hidden;
   background: var(--ns-white);
@@ -101,7 +84,6 @@ html[lang="ko"] .ns-about,
   margin-bottom: 2rem;
 }
 
-/* Hero title */
 .ns-title {
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(2.25rem, 3.8vw, 3.55rem);
@@ -110,8 +92,6 @@ html[lang="ko"] .ns-about,
   letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   color: var(--ns-rock);
-
-  /* Wider than before to avoid awkward line breaks */
   max-width: 16ch;
 }
 
@@ -139,7 +119,6 @@ html[lang="ko"] .ns-title em,
   color: var(--ns-sea);
 }
 
-/* Hero subtitle */
 .ns-subtitle {
   font-size: 1.08rem;
   font-weight: 300;
@@ -257,7 +236,7 @@ html[lang="ko"] .ns-btn-secondary,
   font-family: "DM Mono", monospace;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
   writing-mode: vertical-rl;
   z-index: 3;
@@ -553,8 +532,6 @@ html[lang="ko"] .ns-about aside p,
   :lang(ko) .ns-title {
     font-size: clamp(1.95rem, 8.5vw, 2.8rem);
     max-width: 11em;
-    word-break: keep-all;
-    overflow-wrap: normal;
   }
 
   .ns-subtitle {
@@ -566,8 +543,6 @@ html[lang="ko"] .ns-about aside p,
   :lang(ko) .ns-subtitle {
     font-size: 0.98rem;
     max-width: 100%;
-    word-break: keep-all;
-    overflow-wrap: normal;
   }
 
   .ns-hero-right {
@@ -644,85 +619,19 @@ html[lang="ko"] .ns-about aside p,
     padding: 0.85rem 1.5rem;
   }
 }
-/* Dark mode cleanup for custom landing page */
-body.dark .ns-card,
-.dark .ns-card,
-[data-theme="dark"] .ns-card {
-  background: var(--entry) !important;
-}
 
-body.dark .ns-cards,
-.dark .ns-cards,
-[data-theme="dark"] .ns-cards,
-body.dark .ns-hero,
-.dark .ns-hero,
-[data-theme="dark"] .ns-hero,
-body.dark .ns-intro,
-.dark .ns-intro,
-[data-theme="dark"] .ns-intro,
-body.dark .ns-about,
-.dark .ns-about,
-[data-theme="dark"] .ns-about {
-  background: var(--theme) !important;
-}
-
-body.dark .ns-title,
-.dark .ns-title,
-[data-theme="dark"] .ns-title,
-body.dark .ns-card h2,
-.dark .ns-card h2,
-[data-theme="dark"] .ns-card h2,
-body.dark .ns-about h2,
-.dark .ns-about h2,
-[data-theme="dark"] .ns-about h2,
-body.dark .ns-pull-quote,
-.dark .ns-pull-quote,
-[data-theme="dark"] .ns-pull-quote {
-  color: var(--primary) !important;
-}
-
-body.dark .ns-subtitle,
-.dark .ns-subtitle,
-[data-theme="dark"] .ns-subtitle,
-body.dark .ns-intro-body,
-.dark .ns-intro-body,
-[data-theme="dark"] .ns-intro-body,
-body.dark .ns-card p,
-.dark .ns-card p,
-[data-theme="dark"] .ns-card p,
-body.dark .ns-about p,
-.dark .ns-about p,
-[data-theme="dark"] .ns-about p {
-  color: var(--secondary) !important;
-}
-
-body.dark .ns-pull-quote,
-.dark .ns-pull-quote,
-[data-theme="dark"] .ns-pull-quote {
-  border-left-color: #9fc7dc !important;
-}
-
-body.dark .ns-title em,
-.dark .ns-title em,
-[data-theme="dark"] .ns-title em,
-body.dark .ns-card span,
-.dark .ns-card span,
-[data-theme="dark"] .ns-card span,
-body.dark .ns-btn-secondary,
-.dark .ns-btn-secondary,
-[data-theme="dark"] .ns-btn-secondary {
-  color: #9fc7dc !important;
-}
-
-body.dark .ns-btn-primary,
-.dark .ns-btn-primary,
-[data-theme="dark"] .ns-btn-primary {
-  background: var(--primary) !important;
-  color: var(--theme) !important;
-}
-
-/* Force dark mode for custom landing page - works with PaperMod auto dark mode */
+/* DARK MODE: PaperMod auto mode */
 @media (prefers-color-scheme: dark) {
+  :root {
+    --ns-rock: #ffffff;
+    --ns-slate: #f0eee8;
+    --ns-mist: #ded7cb;
+    --ns-sea: #9fc7dc;
+    --ns-cream: #0f0f0e;
+    --ns-white: #0f0f0e;
+    --ns-fog: rgba(247, 243, 234, 0.25);
+  }
+
   .ns-hero,
   .ns-hero-left,
   .ns-intro,
@@ -745,12 +654,6 @@ body.dark .ns-btn-primary,
     color: #ffffff !important;
   }
 
-  .ns-title em,
-  .ns-card span,
-  .ns-btn-secondary {
-    color: #9fc7dc !important;
-  }
-
   .ns-subtitle,
   .ns-intro-body,
   .ns-card p,
@@ -761,8 +664,15 @@ body.dark .ns-btn-primary,
   .ns-eyebrow,
   .ns-card-number,
   .ns-label,
-  .ns-divider span {
-    color: #c9c3b8 !important;
+  .ns-divider span,
+  .ns-about aside span {
+    color: #ded7cb !important;
+  }
+
+  .ns-title em,
+  .ns-card span,
+  .ns-btn-secondary {
+    color: #9fc7dc !important;
   }
 
   .ns-pull-quote {
@@ -774,16 +684,21 @@ body.dark .ns-btn-primary,
     color: #0f0f0e !important;
   }
 
+  .ns-btn-primary:hover {
+    background: #9fc7dc !important;
+    color: #0f0f0e !important;
+  }
+
   .ns-btn-secondary {
     border-bottom-color: #9fc7dc !important;
   }
 
   .ns-divider div {
-    background: rgba(247, 243, 234, 0.22) !important;
+    background: rgba(247, 243, 234, 0.28) !important;
   }
 
   .ns-about aside {
-    border-left-color: rgba(247, 243, 234, 0.25) !important;
+    border-left-color: rgba(247, 243, 234, 0.28) !important;
   }
 
   .ns-about aside p {
