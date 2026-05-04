@@ -16,16 +16,17 @@
   --ns-white: #faf9f6;
 }
 
-/* Dark mode colours */
+/* Connect custom landing colours to PaperMod theme colours */
 body.dark,
-.dark {
-  --ns-rock: #f5f2ec;
-  --ns-slate: #d8d3c8;
-  --ns-mist: #b8b4ac;
-  --ns-sea: #8fb3c7;
-  --ns-cream: #1f1f1d;
-  --ns-white: #161615;
-  --ns-fog: #3a3935;
+.dark,
+[data-theme="dark"] {
+  --ns-rock: var(--primary);
+  --ns-slate: var(--secondary);
+  --ns-mist: var(--tertiary);
+  --ns-sea: #9fc7dc;
+  --ns-cream: var(--theme);
+  --ns-white: var(--theme);
+  --ns-fog: var(--border);
 }
 
 /* Let the PaperMod home page use the full width */
@@ -643,179 +644,79 @@ html[lang="ko"] .ns-about aside p,
     padding: 0.85rem 1.5rem;
   }
 }
-
-/* Dark mode fix for intro quote only */
-body.dark .ns-pull-quote,
-.dark .ns-pull-quote {
-  color: #f7f3ea !important;
-  border-left-color: #9fc7dc !important;
-}
-/* Force dark mode for custom landing page */
-html.dark body.home,
-body.dark.home,
-body.dark,
-.dark body {
-  background: #0f0f0e !important;
+/* Dark mode cleanup for custom landing page */
+body.dark .ns-card,
+.dark .ns-card,
+[data-theme="dark"] .ns-card {
+  background: var(--entry) !important;
 }
 
-/* Landing page sections */
-html.dark .ns-hero,
-body.dark .ns-hero,
-.dark .ns-hero,
-html.dark .ns-intro,
-body.dark .ns-intro,
-.dark .ns-intro,
-html.dark .ns-cards,
 body.dark .ns-cards,
 .dark .ns-cards,
-html.dark .ns-about,
+[data-theme="dark"] .ns-cards,
+body.dark .ns-hero,
+.dark .ns-hero,
+[data-theme="dark"] .ns-hero,
+body.dark .ns-intro,
+.dark .ns-intro,
+[data-theme="dark"] .ns-intro,
 body.dark .ns-about,
-.dark .ns-about {
-  background: #0f0f0e !important;
-  color: #f7f3ea !important;
+.dark .ns-about,
+[data-theme="dark"] .ns-about {
+  background: var(--theme) !important;
 }
 
-/* Hero left side */
-html.dark .ns-hero-left,
-body.dark .ns-hero-left,
-.dark .ns-hero-left {
-  background: #0f0f0e !important;
-}
-
-/* Main hero text */
-html.dark .ns-eyebrow,
-body.dark .ns-eyebrow,
-.dark .ns-eyebrow {
-  color: #c9c3b8 !important;
-}
-
-html.dark .ns-title,
 body.dark .ns-title,
-.dark .ns-title {
-  color: #ffffff !important;
-}
-
-html.dark .ns-title em,
-body.dark .ns-title em,
-.dark .ns-title em {
-  color: #9fc7dc !important;
-}
-
-html.dark .ns-subtitle,
-body.dark .ns-subtitle,
-.dark .ns-subtitle {
-  color: #f0eee8 !important;
-}
-
-/* Buttons */
-html.dark .ns-btn-primary,
-body.dark .ns-btn-primary,
-.dark .ns-btn-primary {
-  background: #f7f3ea !important;
-  color: #0f0f0e !important;
-}
-
-html.dark .ns-btn-primary:hover,
-body.dark .ns-btn-primary:hover,
-.dark .ns-btn-primary:hover {
-  background: #9fc7dc !important;
-  color: #0f0f0e !important;
-}
-
-html.dark .ns-btn-secondary,
-body.dark .ns-btn-secondary,
-.dark .ns-btn-secondary {
-  color: #9fc7dc !important;
-  border-bottom-color: #9fc7dc !important;
-}
-
-/* Intro quote and body */
-html.dark .ns-pull-quote,
+.dark .ns-title,
+[data-theme="dark"] .ns-title,
+body.dark .ns-card h2,
+.dark .ns-card h2,
+[data-theme="dark"] .ns-card h2,
+body.dark .ns-about h2,
+.dark .ns-about h2,
+[data-theme="dark"] .ns-about h2,
 body.dark .ns-pull-quote,
-.dark .ns-pull-quote {
-  color: #ffffff !important;
+.dark .ns-pull-quote,
+[data-theme="dark"] .ns-pull-quote {
+  color: var(--primary) !important;
+}
+
+body.dark .ns-subtitle,
+.dark .ns-subtitle,
+[data-theme="dark"] .ns-subtitle,
+body.dark .ns-intro-body,
+.dark .ns-intro-body,
+[data-theme="dark"] .ns-intro-body,
+body.dark .ns-card p,
+.dark .ns-card p,
+[data-theme="dark"] .ns-card p,
+body.dark .ns-about p,
+.dark .ns-about p,
+[data-theme="dark"] .ns-about p {
+  color: var(--secondary) !important;
+}
+
+body.dark .ns-pull-quote,
+.dark .ns-pull-quote,
+[data-theme="dark"] .ns-pull-quote {
   border-left-color: #9fc7dc !important;
 }
 
-html.dark .ns-intro-body,
-body.dark .ns-intro-body,
-.dark .ns-intro-body,
-html.dark .ns-intro-body p,
-body.dark .ns-intro-body p,
-.dark .ns-intro-body p {
-  color: #f0eee8 !important;
-}
-
-/* Cards */
-html.dark .ns-card,
-body.dark .ns-card,
-.dark .ns-card {
-  background: #161615 !important;
-  color: #f7f3ea !important;
-  border-color: rgba(247, 243, 234, 0.2) !important;
-}
-
-html.dark .ns-card h2,
-body.dark .ns-card h2,
-.dark .ns-card h2 {
-  color: #ffffff !important;
-}
-
-html.dark .ns-card p,
-body.dark .ns-card p,
-.dark .ns-card p {
-  color: #f0eee8 !important;
-}
-
-html.dark .ns-card-number,
-body.dark .ns-card-number,
-.dark .ns-card-number {
-  color: #c9c3b8 !important;
-}
-
-html.dark .ns-card span,
+body.dark .ns-title em,
+.dark .ns-title em,
+[data-theme="dark"] .ns-title em,
 body.dark .ns-card span,
-.dark .ns-card span {
+.dark .ns-card span,
+[data-theme="dark"] .ns-card span,
+body.dark .ns-btn-secondary,
+.dark .ns-btn-secondary,
+[data-theme="dark"] .ns-btn-secondary {
   color: #9fc7dc !important;
 }
 
-/* Divider and labels */
-html.dark .ns-divider span,
-body.dark .ns-divider span,
-.dark .ns-divider span,
-html.dark .ns-label,
-body.dark .ns-label,
-.dark .ns-label {
-  color: #c9c3b8 !important;
-}
-
-html.dark .ns-divider div,
-body.dark .ns-divider div,
-.dark .ns-divider div {
-  background: rgba(247, 243, 234, 0.22) !important;
-}
-
-/* About section */
-html.dark .ns-about h2,
-body.dark .ns-about h2,
-.dark .ns-about h2 {
-  color: #ffffff !important;
-}
-
-html.dark .ns-about p,
-body.dark .ns-about p,
-.dark .ns-about p {
-  color: #f0eee8 !important;
-}
-
-html.dark .ns-about aside,
-body.dark .ns-about aside,
-.dark .ns-about aside {
-  border-left-color: rgba(247, 243, 234, 0.25) !important;
-}
-
-html.dark .ns-about aside p,
-body.dark .ns-about aside p,
-.dark .ns-about aside p {
-  color: #ffffff !important;
+body.dark .ns-btn-primary,
+.dark .ns-btn-primary,
+[data-theme="dark"] .ns-btn-primary {
+  background: var(--primary) !important;
+  color: var(--theme) !important;
 }
