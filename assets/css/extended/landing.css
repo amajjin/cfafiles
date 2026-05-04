@@ -642,4 +642,24 @@ html[lang="ko"] .ns-about aside p,
     padding: 0.85rem 1.5rem;
   }
 }
+/* Stronger dark mode text contrast for intro section */
+body.dark .ns-intro,
+.dark .ns-intro {
+  color: #f5f2ec;
+}
 
+body.dark .ns-pull-quote,
+.dark .ns-pull-quote {
+  color: #ffffff;
+  border-left-color: #9fc7dc;
+}
+
+body.dark .ns-intro-body,
+.dark .ns-intro-body {
+  color: #f0eee8;
+}
+
+body.dark .ns-intro-body p,
+.dark .ns-intro-body p {
+  color: #f0eee8;
+}
