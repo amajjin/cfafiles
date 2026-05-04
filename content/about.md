@@ -29,12 +29,13 @@ These are simply notes from life on this island — a one-person journal about t
 
 I write from Newfoundland. I drink coffee, go fishing, and take photographs.
 
+## Photography & Video
+
+Unless otherwise noted, most of the images on Newfoundland Saga come from [J.Jin Photography](https://jjinphotography.com), my St. John’s-based photography work.
+
+Newfoundland Saga records life on the island through words; J.Jin Photography records it through images.
+
 ## Get in touch
 
 For corrections, suggestions, or questions, please email [newfoundlandsaga@gmail.com](mailto:newfoundlandsaga@gmail.com).
 
-
-
-## Photography & Video
-
-Many of the photographs and videos on Newfoundland Saga are created by [J.Jin Photography](https://jjinphotography.com), my St. John’s-based photography work. Newfoundland Saga records life on the island through words; J.Jin Photography records it through images.
