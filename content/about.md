@@ -2,20 +2,33 @@
 title: "About"
 date: 2026-05-03
 draft: false
+showReadingTime: false
+showWordCount: false
+showDate: false
+showAuthor: false
+showBreadCrumbs: false
+showPostNavLinks: false
+showTranslationList: false
 ---
 
-## Newfoundland Saga
+# Newfoundland Saga
 
-An honest guide to living in Newfoundland, written by someone who came from away too. CFA — Come From Away — is what Newfoundlanders call everyone else, with affection and mild suspicion in equal measure. This site is written from that position.
+Newfoundland Saga is an honest guide to living in Newfoundland, written by someone who came from away too.
 
-The official guides tell you what the province wants you to hear. This one tells you what you'll actually find: how rent works, what the winter is really like, why the people seem strange before they seem warm, and a hundred small things nobody bothered to write down.
+CFA — Come From Away — is what Newfoundlanders call people who are not originally from here. Sometimes it is affectionate. Sometimes it is funny. Sometimes it reminds you that belonging takes time.
+
+This site begins from that position: close enough to know, far enough to notice.
+
+Official guides are useful, but they often leave out the things people only learn after arriving: how long winter feels, how difficult transportation can be, how housing works, why people are both warm and hard to read, and what it means to belong somewhere that still sees you as someone from away.
+
+There are no sponsorships, no tourism-board partnerships, and no attempt to sell Newfoundland as easier than it is.
+
+Just notes from life on The Rock.
 
 ## Who writes this
 
-J. Jin. A librarian at Memorial University, a photographer on weekends, and a CFA who has been here long enough to notice things and not yet long enough to stop being surprised.
-
-No sponsorships. No tourism board partnerships. No hidden affiliate links beyond what's clearly disclosed.
+This site is written by J. Jin, a Korean newcomer who has lived in St. John’s long enough to understand some things, and not long enough to stop being surprised.
 
 ## Get in touch
 
-For corrections, suggestions, or anything else: through GitHub, or via the photography studio site at [jjinphotography.com](https://jjinphotography.com).
+For corrections, suggestions, or questions, please get in touch through the contact information linked on this site.
