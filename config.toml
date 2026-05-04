@@ -9,7 +9,7 @@ hasCJKLanguage = true
 
 [services]
   [services.disqus]
-    shortname = "newfoundlandsaga"
+    shortname = "newfoundlandsaga-1"
 
 [pagination]
   pagerSize = 10
