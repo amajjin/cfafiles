@@ -526,3 +526,11 @@ html[lang="ko"] .ns-title,
 .ns-about {
   font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
 }
+/* Reduce hero title and subtitle size, but keep readability */
+.ns-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+}
+
+.ns-subtitle {
+  font-size: 0.85rem;
+}
