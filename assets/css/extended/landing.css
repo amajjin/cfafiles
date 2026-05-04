@@ -633,3 +633,33 @@ html[lang="ko"] .ns-about aside p,
     padding: 0.85rem 1.5rem;
   }
 }
+
+/* DARK MODE FIX */
+body.dark .ns-hero,
+body.dark .ns-intro,
+body.dark .ns-cards,
+body.dark .ns-about {
+  color: #e8e6e1;
+}
+
+body.dark .ns-pull-quote {
+  color: #f5f2ec;
+  border-left-color: #8fb3c7;
+}
+
+body.dark .ns-intro-body {
+  color: #d8d3c8;
+}
+
+body.dark .ns-intro-body p,
+body.dark .ns-pull-quote {
+  color: #d8d3c8;
+}
+
+body.dark .ns-divider span {
+  color: #b8b4ac;
+}
+
+body.dark .ns-divider div {
+  background: rgba(245, 242, 236, 0.22);
+}
