@@ -1,369 +1,139 @@
-# https://hugodoit.pages.dev/theme-documentation-basics/#basic-configuration
-baseURL = "https://newfoundlandsaga.com"
+baseURL = "https://newfoundlandsaga.com/"
 title = "Newfoundland Saga"
-
-canonifyURLs = false
-relativeURLs = false
+theme = "PaperMod"
 
 defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+hasCJKLanguage = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  env = "production"
+  title = "Newfoundland Saga"
+  description = "An honest guide to living in Newfoundland, written by someone who came from away too."
+  author = "Newfoundland Saga"
+  defaultTheme = "auto"
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+
+[params.homeInfoParams]
+  Title = "So you're moving to Newfoundland."
+  Content = "Nobody warned you. We will. An honest guide to living on The Rock — for international students, newcomers, and CFAs."
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:jaehong.jin@gmail.com"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 40
 
 [languages]
+
   [languages.en]
     languageName = "English"
     weight = 1
+    title = "Newfoundland Saga"
+
+    [languages.en.params]
+      languageAltTitle = "English"
+
+    [languages.en.params.homeInfoParams]
+      Title = "So you're moving to Newfoundland."
+      Content = "Nobody warned you. We will. An honest guide to living on The Rock — for international students, newcomers, and CFAs."
+
     [[languages.en.menu.main]]
       identifier = "posts"
       name = "Posts"
       url = "/posts/"
-      weight = 1
+      weight = 10
+
     [[languages.en.menu.main]]
       identifier = "categories"
       name = "Categories"
       url = "/categories/"
-      weight = 2
+      weight = 20
+
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "Tags"
+      url = "/tags/"
+      weight = 30
+
     [[languages.en.menu.main]]
       identifier = "about"
       name = "About"
       url = "/about/"
-      weight = 3
+      weight = 40
 
   [languages.ko]
     languageName = "한국어"
     weight = 2
+    title = "뉴펀들랜드 사가"
+
+    [languages.ko.params]
+      languageAltTitle = "한국어"
+
+    [languages.ko.params.homeInfoParams]
+      Title = "뉴펀들랜드로 이주하시나요?"
+      Content = "아무도 미리 말해주지 않았던 뉴펀들랜드 생활 이야기. 유학생, 이민자, 그리고 Come From Away를 위한 현실적인 안내서."
+
     [[languages.ko.menu.main]]
       identifier = "posts"
-      name = "글 목록"
+      name = "글"
       url = "/ko/posts/"
-      weight = 1
+      weight = 10
+
     [[languages.ko.menu.main]]
       identifier = "categories"
       name = "카테고리"
       url = "/ko/categories/"
-      weight = 2
+      weight = 20
+
+    [[languages.ko.menu.main]]
+      identifier = "tags"
+      name = "태그"
+      url = "/ko/tags/"
+      weight = 30
+
     [[languages.ko.menu.main]]
       identifier = "about"
       name = "소개"
       url = "/ko/about/"
-      weight = 3
-
-languageCode = "en"
-theme = "DoIt"
-
-enableRobotsTXT = true
-enableGitInfo = true
-enableEmoji = true
-
-[params]
-  title = "Newfoundland Saga"
-  description = "A Come From Away's guide to Newfoundland"
-  keywords = ["Newfoundland", "Immigration", "CFA", "Come From Away", "NL"]
-  version = "0.3.X"
-  defaultTheme = "auto"
-  gitRepo = "https://github.com/amajjin/cfafiles"
-  fingerprint = ""
-  dateFormat = "2006-01-02"
-  images = [""]
-  enablePWA = false
-  cacheRemoteImages = true
-  optimizeImages = true
-  srcsetSmallResizeMethod = "700x webp Lanczos q75"
-  srcsetDefaultResizeMethod = "1200x webp Lanczos q75"
-  srcsetLargeResizeMethod = "2000x webp Lanczos q75"
-  license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
-[params.app]
-  title = "Newfoundland Saga"
-  noFavicon = false
-  svgFavicon = ""
-  themeColor = "#ffffff"
-  iconColor = "#5bbad5"
-  tileColor = "#da532c"
-
-[params.image]
-  cacheRemote = true
-  optimise = true
-
-[params.header]
-  themeChangeMode = "switch"
-  [params.header.title]
-    logo = ""
-    name = ""
-    pre = "<i class='fas fa-edit fa-fw'></i>"
-    post = ""
-    typeit = false
-
-[params.footer]
-  enable = true
-  custom = ''
-  hugo = true
-  hostedOn = ''
-  copyright = true
-  author = true
-  since = 2026
-  icp = ""
-  license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-
-[params.section]
-  paginate = 20
-  dateFormat = "01-02"
-  rss = 10
-  [params.section.recentlyUpdated]
-    enable   = true
-    rss      = true
-    days     = 30
-    maxCount = 10
-
-[params.list]
-  paginate = 20
-  dateFormat = "01-02"
-  rss = 10
-
-[params.home]
-  rss = 10
-  [params.home.profile]
-    enable = false
-  [params.home.posts]
-    enable = false
-
-[params.social]
-  GitHub         = "amajjin"
-  Email          = ""
-  RSS            = true
-
-[params.page]
-  hiddenFromHomePage = false
-  hiddenFromSearch = false
-  twemoji = false
-  lightgallery = false
-  ruby = true
-  fraction = true
-  linkToMarkdown = true
-  linkToSource = "https://github.com/amajjin/cfafiles/blob/main/content/{path}"
-  rssFullText = false
-  seriesNavigation = true
-  enableLastMod = true
-  enableWordCount = true
-  enableReadingTime = true
-  [params.page.outdatedArticleReminder]
-    enable = false
-    reminder = 90
-    warning = 180
-  [params.page.toc]
-    enable = true
-    keepStatic = true
-    auto = true
-  [params.page.code]
-    lineNos = false
-    wrap = false
-    copy = true
-    maxShownLines = 15
-    header = true
-  [params.page.table]
-    sort = true
-  [params.page.math]
-    enable = true
-    blockLeftDelimiter  = ""
-    blockRightDelimiter = ""
-    inlineLeftDelimiter  = ""
-    inlineRightDelimiter = ""
-    copyTex = true
-    mhchem = true
-    mathjax = false
-  [params.page.mapbox]
-    accessToken = ""
-    lightStyle = "mapbox://styles/mapbox/light-v9"
-    darkStyle = "mapbox://styles/mapbox/dark-v9"
-    navigation = true
-    geolocate = true
-    scale = true
-    fullscreen = true
-  [params.page.share]
-    enable        = true
-    Twitter       = true
-    Facebook      = true
-    Linkedin      = false
-    Whatsapp      = false
-    Pinterest     = false
-    Tumblr        = false
-    HackerNews    = true
-    Reddit        = true
-    VK            = false
-    Buffer        = false
-    Xing          = false
-    Line          = false
-    Instapaper    = false
-    Pocket        = false
-    Digg          = false
-    Stumbleupon   = false
-    Flipboard     = false
-    Weibo         = false
-    Renren        = false
-    Myspace       = false
-    Blogger       = false
-    Baidu         = false
-    Odnoklassniki = false
-    Evernote      = false
-    Skype         = false
-    Trello        = false
-    Mix           = false
-    Mastodon      = false
-    Telegram      = false
-
-  [params.page.instantpage]
-    enable = false
-
-  [params.page.comment]
-    enable = true
-    [params.page.comment.disqus]
-      enable = true
-      shortname = "cfa-files"
-
-  [params.page.library]
-    [params.page.library.css]
-    [params.page.library.js]
-
-  [params.page.seo]
-    images = []
-    [params.page.seo.publisher]
-      name    = "Newfoundland Saga"
-      logoUrl = ""
-
-  [params.page.related]
-    enable = true
-    count  = 5
-
-[params.sponsor]
-  enable = false
-  bio    = ""
-  link   = ""
-
-[params.typeit]
-  speed = 100
-  cursorSpeed = 1000
-  cursorChar = "|"
-  duration = -1
-
-[params.verification]
-  google    = ""
-  bing      = ""
-  yandex    = ""
-  pinterest = ""
-  baidu     = ""
-  so        = ""
-  sogou     = ""
-
-[params.seo]
-  image = ""
-  thumbnailUrl = ""
-
-[params.analytics]
-  enable = false
-  [params.analytics.google]
-    id = ""
-    anonymizeIP = true
-
-[params.cookieconsent]
-  enable = true
-  [params.cookieconsent.content]
-    message = ""
-    dismiss = ""
-    link    = ""
-
-[params.cdn]
-  data = ""
-
-[params.compatibility]
-  polyfill = false
-
-[params.search]
-  enable = true
-  type = "fuse"
-  contentLength = 4000
-  placeholder = "Search"
-  maxResultLength = 10
-  snippetLength = 30
-  highlightTag = "em"
-  absoluteURL = false
-  [params.search.algolia]
-    index     = ""
-    appID     = ""
-    searchKey = ""
-  [params.search.fuse]
-    isCaseSensitive = false
-    minMatchCharLength = 2
-    findAllMatches = false
-    location = 0
-    threshold = 0.3
-    distance = 100
-    ignoreLocation = false
-    useExtendedSearch = false
-    ignoreFieldNorm = false
-
-[params.author]
-  name  = "J. Jin"
-  email = ""
-  link  = "https://github.com/amajjin"
-  gravatarEmail = ""
-
-[markup]
-  [markup.highlight]
-    codeFences         = true
-    guessSyntax        = true
-    lineNos            = true
-    lineNumbersInTable = true
-    noClasses = false
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote       = true
-      linkify        = true
-      strikethrough  = true
-      table          = true
-      taskList       = true
-      typographer    = true
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel   = 6
-
-[sitemap]
-  changefreq = "weekly"
-  filename   = "sitemap.xml"
-  priority   = 0.5
-
-[permalinks]
-  posts = ":year/:month/:contentbasename"
-
-[privacy]
-  [privacy.googleAnalytics]
-  [privacy.x]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
-
-[mediaTypes]
-  [mediaTypes."text/plain"]
-    suffixes = ["md"]
-
-[outputFormats.MarkDown]
-  mediaType   = "text/plain"
-  isPlainText = true
-  isHTML      = false
-
-[outputs]
-  home         = ["HTML", "JSON", "RSS"]
-  page         = ["HTML", "MarkDown"]
-  section      = ["HTML", "RSS"]
-  taxonomy     = ["HTML", "RSS"]
-
-[taxonomies]
-  author   = "authors"
-  category = "categories"
-  tag      = "tags"
-  series   = "series"
+      weight = 40
