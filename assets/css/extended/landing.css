@@ -520,3 +520,9 @@ html[lang="ko"] .ns-title,
     gap: 3rem;
   }
 }
+.ns-hero,
+.ns-intro,
+.ns-cards,
+.ns-about {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+}
