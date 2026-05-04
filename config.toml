@@ -137,9 +137,9 @@ hasCJKLanguage = true
       name = "소개"
       url = "/ko/about/"
       weight = 40
-[services]
-  [services.disqus]
-    shortname = "newfoundlandsaga"
+    [services]
+      [services.disqus]
+        shortname = "newfoundlandsaga"
 
-[params]
-  comments = true
+    [params]
+      comments = true
