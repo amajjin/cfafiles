@@ -15,8 +15,10 @@
   --ns-cream: #f5f2ec;
   --ns-white: #faf9f6;
 }
+
 /* Dark mode colours */
-body.dark {
+body.dark,
+.dark {
   --ns-rock: #f5f2ec;
   --ns-slate: #d8d3c8;
   --ns-mist: #b8b4ac;
@@ -25,6 +27,7 @@ body.dark {
   --ns-white: #161615;
   --ns-fog: #3a3935;
 }
+
 /* Let the PaperMod home page use the full width */
 body.home .main {
   max-width: none;
@@ -71,8 +74,8 @@ html[lang="ko"] .ns-about,
   min-height: 86vh;
   display: grid;
 
-  /* Text gets more space; image is capped so it does not dominate on wide screens */
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+  /* Near-half image layout, but text still gets enough room */
+  grid-template-columns: minmax(0, 52vw) minmax(420px, 48vw);
 
   margin: 1.5rem calc(50% - 50vw) 4rem;
   overflow: hidden;
@@ -124,8 +127,6 @@ html[lang="ko"] .ns-title,
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
-
-  /* Korean needs a little more visual width than the old 13ch */
   max-width: 13em;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -642,28 +643,6 @@ html[lang="ko"] .ns-about aside p,
     padding: 0.85rem 1.5rem;
   }
 }
-/* Stronger dark mode text contrast for intro section */
-body.dark .ns-intro,
-.dark .ns-intro {
-  color: #f5f2ec;
-}
-
-body.dark .ns-pull-quote,
-.dark .ns-pull-quote {
-  color: #ffffff;
-  border-left-color: #9fc7dc;
-}
-
-body.dark .ns-intro-body,
-.dark .ns-intro-body {
-  color: #f0eee8;
-}
-
-body.dark .ns-intro-body p,
-.dark .ns-intro-body p {
-  color: #f0eee8;
-}
-
 
 /* Dark mode fix for intro quote only */
 body.dark .ns-pull-quote,
@@ -671,4 +650,3 @@ body.dark .ns-pull-quote,
   color: #f7f3ea !important;
   border-left-color: #9fc7dc !important;
 }
-
