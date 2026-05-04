@@ -644,9 +644,98 @@ html[lang="ko"] .ns-about aside p,
   }
 }
 
-/* Dark mode fix for intro quote only */
+/* Strong dark mode for Newfoundland Saga landing page */
+body.dark .ns-hero,
+.dark .ns-hero,
+body.dark .ns-intro,
+.dark .ns-intro,
+body.dark .ns-cards,
+.dark .ns-cards,
+body.dark .ns-about,
+.dark .ns-about {
+  background: #0f0f0e !important;
+  color: #f7f3ea !important;
+}
+
+body.dark .ns-title,
+.dark .ns-title,
+body.dark .ns-about h2,
+.dark .ns-about h2,
+body.dark .ns-card h2,
+.dark .ns-card h2 {
+  color: #ffffff !important;
+}
+
+body.dark .ns-title em,
+.dark .ns-title em {
+  color: #9fc7dc !important;
+}
+
+body.dark .ns-subtitle,
+.dark .ns-subtitle,
+body.dark .ns-intro-body,
+.dark .ns-intro-body,
+body.dark .ns-intro-body p,
+.dark .ns-intro-body p,
+body.dark .ns-about p,
+.dark .ns-about p,
+body.dark .ns-card p,
+.dark .ns-card p {
+  color: #f0eee8 !important;
+}
+
 body.dark .ns-pull-quote,
 .dark .ns-pull-quote {
-  color: #f7f3ea !important;
+  color: #ffffff !important;
   border-left-color: #9fc7dc !important;
+}
+
+body.dark .ns-card,
+.dark .ns-card {
+  background: #161615 !important;
+  color: #f7f3ea !important;
+  border-color: rgba(247, 243, 234, 0.18) !important;
+}
+
+body.dark .ns-card-number,
+.dark .ns-card-number,
+body.dark .ns-label,
+.dark .ns-label,
+body.dark .ns-divider span,
+.dark .ns-divider span {
+  color: #c9c3b8 !important;
+}
+
+body.dark .ns-card span,
+.dark .ns-card span,
+body.dark .ns-btn-secondary,
+.dark .ns-btn-secondary {
+  color: #9fc7dc !important;
+}
+
+body.dark .ns-divider div,
+.dark .ns-divider div {
+  background: rgba(247, 243, 234, 0.22) !important;
+}
+
+body.dark .ns-btn-primary,
+.dark .ns-btn-primary {
+  background: #f7f3ea !important;
+  color: #0f0f0e !important;
+}
+
+body.dark .ns-btn-primary:hover,
+.dark .ns-btn-primary:hover {
+  background: #9fc7dc !important;
+  color: #0f0f0e !important;
+}
+
+body.dark .ns-about aside,
+.dark .ns-about aside {
+  border-left-color: rgba(247, 243, 234, 0.25) !important;
+}
+
+body.dark .ns-about aside p,
+.dark .ns-about aside p {
+  color: #ffffff !important;
 }
