@@ -663,3 +663,12 @@ body.dark .ns-intro-body p,
 .dark .ns-intro-body p {
   color: #f0eee8;
 }
+
+
+/* Dark mode fix for intro quote only */
+body.dark .ns-pull-quote,
+.dark .ns-pull-quote {
+  color: #f7f3ea !important;
+  border-left-color: #9fc7dc !important;
+}
+
