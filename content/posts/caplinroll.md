@@ -3,7 +3,7 @@ title: "The Capelin Roll: The Week Newfoundland Stops Everything"
 date: 2026-05-03
 draft: false
 tags: ["tradition", "food"]
-categories: ["to-see"]
+categories: ["culture"]
 language: "en"
 ---
 
