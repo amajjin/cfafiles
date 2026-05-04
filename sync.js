@@ -41,8 +41,7 @@ async function sync() {
     const slug = props.Slug?.rich_text[0]?.plain_text ||
                  title.replace(/\s+/g, '-').replace(/[^\p{L}\p{N}-]/gu, '').toLowerCase();
 
-const filename = === 'ko' ? `${slug}.ko.md` : `${slug}.md`;
-
+    const filename = language === 'ko' ? `${slug}.ko.md` : `${slug}.md`;
     const filename = === 'ko' ? `${slug}.ko.md` : `${slug}.md`;
     const mdBlocks = await n2m.pageToMarkdown(page.id);
     const mdContent = n2m.toMarkdownString(mdBlocks);
