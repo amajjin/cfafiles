@@ -15,7 +15,16 @@
   --ns-cream: #f5f2ec;
   --ns-white: #faf9f6;
 }
-
+/* Dark mode colours */
+body.dark {
+  --ns-rock: #f5f2ec;
+  --ns-slate: #d8d3c8;
+  --ns-mist: #b8b4ac;
+  --ns-sea: #8fb3c7;
+  --ns-cream: #1f1f1d;
+  --ns-white: #161615;
+  --ns-fog: #3a3935;
+}
 /* Let the PaperMod home page use the full width */
 body.home .main {
   max-width: none;
@@ -634,32 +643,3 @@ html[lang="ko"] .ns-about aside p,
   }
 }
 
-/* DARK MODE FIX */
-body.dark .ns-hero,
-body.dark .ns-intro,
-body.dark .ns-cards,
-body.dark .ns-about {
-  color: #e8e6e1;
-}
-
-body.dark .ns-pull-quote {
-  color: #f5f2ec;
-  border-left-color: #8fb3c7;
-}
-
-body.dark .ns-intro-body {
-  color: #d8d3c8;
-}
-
-body.dark .ns-intro-body p,
-body.dark .ns-pull-quote {
-  color: #d8d3c8;
-}
-
-body.dark .ns-divider span {
-  color: #b8b4ac;
-}
-
-body.dark .ns-divider div {
-  background: rgba(245, 242, 236, 0.22);
-}
