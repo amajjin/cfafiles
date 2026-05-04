@@ -1,8 +1,13 @@
 ---
+title: "소개"
+date: 2026-05-03
+draft: false
 showReadingTime: false
 showWordCount: false
 showDate: false
 showAuthor: false
+showBreadCrumbs: false
+showPostNavLinks: false
 showTranslationList: false
 ---
 
