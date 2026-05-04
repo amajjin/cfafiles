@@ -7,6 +7,10 @@ defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 hasCJKLanguage = true
 
+[services]
+  [services.disqus]
+    shortname = "newfoundlandsaga"
+
 [pagination]
   pagerSize = 10
 
@@ -20,7 +24,7 @@ hasCJKLanguage = true
   description = "An honest guide to living in Newfoundland, written by someone who came from away too."
   author = "Newfoundland Saga"
   defaultTheme = "auto"
-
+  comments = true
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -137,9 +141,3 @@ hasCJKLanguage = true
       name = "소개"
       url = "/ko/about/"
       weight = 40
-    [services]
-      [services.disqus]
-        shortname = "newfoundlandsaga"
-
-    [params]
-      comments = true
