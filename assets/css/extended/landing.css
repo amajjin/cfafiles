@@ -51,12 +51,20 @@ html[lang="ko"] .ns-about,
   font-family: "Noto Serif KR", "Source Serif 4", Georgia, serif;
 }
 
+/* Prevent selected words from breaking awkwardly */
+.nowrap {
+  white-space: nowrap;
+}
+
 /* HERO */
 .ns-hero {
   width: 100vw;
   min-height: 86vh;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+  /* Text gets more space; image is capped so it does not dominate on wide screens */
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+
   margin: 1.5rem calc(50% - 50vw) 4rem;
   overflow: hidden;
   background: var(--ns-white);
@@ -80,16 +88,18 @@ html[lang="ko"] .ns-about,
   margin-bottom: 2rem;
 }
 
-/* Reduced hero title size */
+/* Hero title */
 .ns-title {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  font-size: clamp(2.25rem, 3.8vw, 3.55rem);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   color: var(--ns-rock);
-  max-width: 13ch;
+
+  /* Wider than before to avoid awkward line breaks */
+  max-width: 16ch;
 }
 
 .ns-title em {
@@ -101,11 +111,15 @@ html[lang="ko"] .ns-about,
 html[lang="ko"] .ns-title,
 :lang(ko) .ns-title {
   font-family: "Noto Serif KR", serif;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2.1rem, 3.8vw, 3.35rem);
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
-  max-width: 13ch;
+
+  /* Korean needs a little more visual width than the old 13ch */
+  max-width: 13em;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 html[lang="ko"] .ns-title em,
@@ -114,7 +128,7 @@ html[lang="ko"] .ns-title em,
   color: var(--ns-sea);
 }
 
-/* Reduced hero subtitle size */
+/* Hero subtitle */
 .ns-subtitle {
   font-size: 1.08rem;
   font-weight: 300;
@@ -131,6 +145,8 @@ html[lang="ko"] .ns-subtitle,
   font-weight: 400;
   line-height: 1.85;
   max-width: 40ch;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* Buttons */
@@ -303,6 +319,8 @@ html[lang="ko"] .ns-pull-quote,
   font-size: clamp(1.25rem, 2vw, 1.65rem);
   font-style: normal;
   line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 html[lang="ko"] .ns-intro-body,
@@ -311,6 +329,8 @@ html[lang="ko"] .ns-intro-body,
   font-size: 1rem;
   line-height: 1.95;
   max-width: 56ch;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* CARDS */
@@ -394,6 +414,8 @@ html[lang="ko"] .ns-card h2,
   font-family: "Noto Serif KR", serif;
   font-size: 1.2rem;
   line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 html[lang="ko"] .ns-card p,
@@ -401,6 +423,8 @@ html[lang="ko"] .ns-card p,
   font-family: "Noto Serif KR", serif;
   font-size: 0.9rem;
   line-height: 1.75;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* ABOUT */
@@ -475,6 +499,8 @@ html[lang="ko"] .ns-about h2,
   font-family: "Noto Serif KR", serif;
   font-size: 1.85rem;
   line-height: 1.4;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 html[lang="ko"] .ns-about p,
@@ -482,6 +508,8 @@ html[lang="ko"] .ns-about p,
   font-family: "Noto Serif KR", serif;
   font-size: 0.98rem;
   line-height: 1.95;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 html[lang="ko"] .ns-about aside p,
@@ -490,6 +518,8 @@ html[lang="ko"] .ns-about aside p,
   font-size: 1.2rem;
   font-style: normal;
   line-height: 1.7;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 /* RESPONSIVE */
@@ -504,14 +534,16 @@ html[lang="ko"] .ns-about aside p,
   }
 
   .ns-title {
-    font-size: clamp(1.9rem, 9vw, 2.8rem);
-    max-width: 13ch;
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    max-width: 16ch;
   }
 
   html[lang="ko"] .ns-title,
   :lang(ko) .ns-title {
-    font-size: clamp(2rem, 10vw, 3.1rem);
-    max-width: 13ch;
+    font-size: clamp(1.95rem, 8.5vw, 2.8rem);
+    max-width: 11em;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .ns-subtitle {
@@ -519,8 +551,16 @@ html[lang="ko"] .ns-about aside p,
     max-width: 100%;
   }
 
+  html[lang="ko"] .ns-subtitle,
+  :lang(ko) .ns-subtitle {
+    font-size: 0.98rem;
+    max-width: 100%;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
   .ns-hero-right {
-    min-height: 340px;
+    min-height: 300px;
   }
 
   .ns-divider,
@@ -550,5 +590,46 @@ html[lang="ko"] .ns-about aside p,
   .ns-about {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+  .ns-hero-left {
+    padding: 4.25rem 1.25rem 2.75rem;
+  }
+
+  .ns-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.35rem);
+    max-width: 15ch;
+  }
+
+  html[lang="ko"] .ns-title,
+  :lang(ko) .ns-title {
+    font-size: clamp(1.85rem, 8.5vw, 2.45rem);
+    max-width: 10.5em;
+  }
+
+  .ns-subtitle {
+    font-size: 0.93rem;
+    line-height: 1.7;
+  }
+
+  html[lang="ko"] .ns-subtitle,
+  :lang(ko) .ns-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .ns-hero-right {
+    min-height: 260px;
+  }
+
+  .ns-cta-group {
+    gap: 1rem;
+  }
+
+  .ns-btn-primary {
+    padding: 0.85rem 1.5rem;
   }
 }
