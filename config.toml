@@ -1,5 +1,6 @@
 # https://hugodoit.pages.dev/theme-documentation-basics/#basic-configuration
 baseURL = "https://newfoundlandsaga.com"
+title = "Newfoundland Saga"
 
 canonifyURLs = false
 relativeURLs = false
@@ -14,7 +15,6 @@ defaultContentLanguage = "en"
       identifier = "posts"
       name = "Posts"
       url = "/posts/"
-      title = "All Posts"
       weight = 1
     [[languages.en.menu.main]]
       identifier = "categories"
@@ -122,16 +122,8 @@ enableEmoji = true
   rss = 10
   [params.home.profile]
     enable = false
-    gravatarEmail = ""
-    avatarURL = ""
-    title = "Newfoundland Saga"
-    subtitle = "A Come From Away's guide to Newfoundland"
-    typeit = false
-    social = true
-    disclaimer = ""
   [params.home.posts]
     enable = false
-    paginate = 10
 
 [params.social]
   GitHub         = "amajjin"
@@ -346,7 +338,7 @@ enableEmoji = true
   priority   = 0.5
 
 [permalinks]
-  posts = ":year/:month/:filename"
+  posts = ":year/:month/:contentbasename"
 
 [privacy]
   [privacy.googleAnalytics]
