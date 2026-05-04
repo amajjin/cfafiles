@@ -31,4 +31,6 @@ CFA는 Come From Away의 줄임말입니다. 뉴펀들랜드 사람들이 이곳
 
 ## 연락
 
-수정할 내용, 제안, 질문이 있다면 이 사이트에 연결된 연락처를 통해 알려주세요.newfoundlandsaga@gmail.com
+## 연락
+
+수정할 내용, 제안, 질문이 있다면 [newfoundlandsaga@gmail.com](mailto:newfoundlandsaga@gmail.com)으로 알려주세요.
