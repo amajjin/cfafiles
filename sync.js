@@ -36,7 +36,7 @@ async function sync() {
       한국어: 'ko'
     };
 
-    const = languageMap[rawLanguage] || 'en';
+    const language = languageMap[rawLanguage] || 'en';
 
     const slug = props.Slug?.rich_text[0]?.plain_text ||
                  title.replace(/\s+/g, '-').replace(/[^\p{L}\p{N}-]/gu, '').toLowerCase();
@@ -62,9 +62,11 @@ const filename = === 'ko' ? `${slug}.ko.md` : `${slug}.md`;
       ''
     ].join('\n');
 
-    const filePath = path.join(postsDir, filename);
-    fs.writeFileSync(filePath, frontMatter + mdContent.parent);
-    console.log('Synced: ' + slug + '.md (lang: ' + + ')');
+const filePath = path.join(postsDir, filename);
+
+fs.writeFileSync(filePath, frontMatter + mdContent.parent);
+
+console.log('Synced: ' + filename + ' (lang: ' + language + ')');
   }
 }
 
