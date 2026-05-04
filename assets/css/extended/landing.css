@@ -324,3 +324,199 @@
     padding-left: 1.25rem;
   }
 }
+/* ===== Newfoundland Saga landing refinements ===== */
+
+/* PaperMod 기본 폭 제한을 홈 화면에서만 넓게 풀기 */
+body.home .main {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 홈 화면 전체를 더 넓게 사용 */
+body.home .post-entry,
+body.home .first-entry,
+body.home .home-info {
+  max-width: none;
+}
+
+/* 랜딩 페이지 전용 폰트: 더 클래식한 serif 느낌 */
+.ns-hero,
+.ns-intro,
+.ns-cards,
+.ns-about {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+}
+
+/* 전체 랜딩 섹션을 화면 가득 사용 */
+.ns-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 86vh;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid rgba(42, 40, 36, 0.08);
+  border-bottom: 1px solid rgba(42, 40, 36, 0.08);
+}
+
+/* 왼쪽 텍스트 박스를 더 넓게 */
+.ns-hero-left {
+  padding: 6rem max(3rem, calc((100vw - 1180px) / 2)) 6rem max(3rem, calc((100vw - 1180px) / 2));
+}
+
+/* 제목은 크지만 줄간격과 폭을 안정적으로 */
+.ns-title {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+  font-size: clamp(3.2rem, 6vw, 6.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  max-width: 11ch;
+}
+
+/* 한국어 제목은 너무 좁지 않게 */
+html[lang="ko"] .ns-title,
+:lang(ko) .ns-title {
+  font-family: "Noto Serif KR", Georgia, serif;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.22;
+  letter-spacing: -0.035em;
+  max-width: 12ch;
+}
+
+/* 부제는 더 넓게, 읽기 좋게 */
+.ns-subtitle {
+  font-size: clamp(1.1rem, 1.35vw, 1.35rem);
+  line-height: 1.75;
+  max-width: 52ch;
+}
+
+/* 오른쪽 이미지 영역을 더 시원하게 */
+.ns-hero-right {
+  min-height: 620px;
+}
+
+/* 인트로도 화면 폭을 더 활용 */
+.ns-divider,
+.ns-intro,
+.ns-about {
+  width: min(1180px, calc(100vw - 3rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 인트로 문장 가독성 개선 */
+.ns-intro {
+  padding-top: 1rem;
+}
+
+.ns-pull-quote {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+  font-size: clamp(1.65rem, 2.8vw, 2.4rem);
+  line-height: 1.45;
+  max-width: 900px;
+}
+
+.ns-intro-body {
+  font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+  line-height: 1.85;
+  max-width: 760px;
+}
+
+/* 카드 영역을 화면 가득 채우되 내부는 넓은 그리드 */
+.ns-cards {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 5rem max(2rem, calc((100vw - 1180px) / 2));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 카드 박스를 더 크게 */
+.ns-card {
+  min-height: 260px;
+  padding: 3rem 2.5rem;
+}
+
+.ns-card h2 {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+  font-size: clamp(1.55rem, 2vw, 2rem);
+  line-height: 1.25;
+}
+
+.ns-card p {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* About 영역도 더 넓고 안정적으로 */
+.ns-about {
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.ns-about h2 {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.18;
+}
+
+.ns-about p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+.ns-about aside p {
+  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  line-height: 1.55;
+}
+
+/* 모바일에서는 화면 가득 유지하되 여백 조정 */
+@media (max-width: 900px) {
+  .ns-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .ns-hero-left {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .ns-title {
+    font-size: clamp(2.6rem, 14vw, 4rem);
+    max-width: 12ch;
+  }
+
+  html[lang="ko"] .ns-title,
+  :lang(ko) .ns-title {
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+    max-width: 12ch;
+  }
+
+  .ns-subtitle {
+    max-width: 100%;
+  }
+
+  .ns-hero-right {
+    min-height: 340px;
+  }
+
+  .ns-cards {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+  }
+
+  .ns-card {
+    min-height: auto;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .ns-about {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
