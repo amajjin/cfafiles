@@ -1,3 +1,9 @@
+/* Newfoundland Saga landing page for PaperMod
+   Safe custom home layout using layouts/partials/home_info.html
+*/
+
+/* Fonts from the original landing page */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=Noto+Serif+KR:wght@300;400;500;700&display=swap');
 
 :root {
   --ns-fog: #e8e6e1;
@@ -5,42 +11,85 @@
   --ns-slate: #4a4844;
   --ns-mist: #b8b4ac;
   --ns-sea: #2d4a5a;
+  --ns-rust: #8b4a2a;
   --ns-cream: #f5f2ec;
   --ns-white: #faf9f6;
 }
 
+/* Let the PaperMod home page use the full width */
+body.home .main {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.home .post-entry,
+body.home .first-entry,
+body.home .home-info {
+  max-width: none;
+}
+
+/* Base landing typography */
+.ns-hero,
+.ns-intro,
+.ns-cards,
+.ns-about {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 300;
+  color: var(--ns-rock);
+}
+
+/* Korean typography */
+html[lang="ko"] .ns-hero,
+html[lang="ko"] .ns-intro,
+html[lang="ko"] .ns-cards,
+html[lang="ko"] .ns-about,
+:lang(ko) .ns-hero,
+:lang(ko) .ns-intro,
+:lang(ko) .ns-cards,
+:lang(ko) .ns-about {
+  font-family: "Noto Serif KR", "Source Serif 4", Georgia, serif;
+}
+
+/* HERO */
 .ns-hero {
-  min-height: 78vh;
+  width: 100vw;
+  min-height: 86vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 1.5rem 0 4rem;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  margin: 1.5rem calc(50% - 50vw) 4rem;
   overflow: hidden;
   background: var(--ns-white);
-  border: 1px solid rgba(42, 40, 36, 0.08);
+  border-top: 0.5px solid rgba(42, 40, 36, 0.12);
+  border-bottom: 0.5px solid rgba(42, 40, 36, 0.12);
 }
 
 .ns-hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4.5rem 3rem;
+  padding: 5rem max(3rem, calc((100vw - 1180px) / 2));
 }
 
 .ns-eyebrow {
-  font-family: monospace;
-  font-size: 0.72rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ns-mist);
   margin-bottom: 2rem;
 }
 
+/* Reduced hero title size */
 .ns-title {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   margin-bottom: 1.5rem;
   color: var(--ns-rock);
+  max-width: 13ch;
 }
 
 .ns-title em {
@@ -48,24 +97,53 @@
   color: var(--ns-sea);
 }
 
-.ns-subtitle {
-  font-size: 1.1rem;
-  color: var(--ns-slate);
-  max-width: 44ch;
-  line-height: 1.8;
-  margin-bottom: 2.5rem;
+/* Korean hero title */
+html[lang="ko"] .ns-title,
+:lang(ko) .ns-title {
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  max-width: 13ch;
 }
 
+html[lang="ko"] .ns-title em,
+:lang(ko) .ns-title em {
+  font-style: normal;
+  color: var(--ns-sea);
+}
+
+/* Reduced hero subtitle size */
+.ns-subtitle {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--ns-slate);
+  max-width: 48ch;
+  margin-bottom: 3rem;
+  line-height: 1.75;
+}
+
+html[lang="ko"] .ns-subtitle,
+:lang(ko) .ns-subtitle {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.85;
+  max-width: 40ch;
+}
+
+/* Buttons */
 .ns-cta-group {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .ns-btn-primary,
 .ns-btn-secondary {
-  font-family: monospace;
+  font-family: "DM Mono", monospace;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -75,7 +153,8 @@
 .ns-btn-primary {
   color: var(--ns-white);
   background: var(--ns-rock);
-  padding: 0.9rem 1.8rem;
+  padding: 0.9rem 2rem;
+  transition: background 0.2s;
 }
 
 .ns-btn-primary:hover {
@@ -85,8 +164,8 @@
 
 .ns-btn-secondary {
   color: var(--ns-slate);
-  border-bottom: 1px solid var(--ns-mist);
-  padding-bottom: 0.15rem;
+  border-bottom: 0.5px solid var(--ns-mist);
+  padding-bottom: 0.1rem;
 }
 
 .ns-btn-secondary:hover {
@@ -94,9 +173,21 @@
   border-color: var(--ns-rock);
 }
 
+html[lang="ko"] .ns-btn-primary,
+html[lang="ko"] .ns-btn-secondary,
+:lang(ko) .ns-btn-primary,
+:lang(ko) .ns-btn-secondary {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Hero image */
 .ns-hero-right {
   position: relative;
-  min-height: 420px;
+  min-height: 620px;
   overflow: hidden;
 }
 
@@ -113,14 +204,22 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(250,249,246,0.10), rgba(42,40,36,0.25));
+  background: linear-gradient(
+    to right,
+    rgba(250, 249, 246, 0.15) 0%,
+    rgba(42, 40, 36, 0.25) 100%
+  );
   z-index: 1;
 }
 
 .ns-hero-texture {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(42,40,36,0.08), rgba(42,40,36,0.45));
+  background: linear-gradient(
+    to bottom,
+    rgba(42, 40, 36, 0.08) 0%,
+    rgba(42, 40, 36, 0.45) 100%
+  );
   z-index: 2;
 }
 
@@ -128,25 +227,27 @@
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  font-family: monospace;
+  font-family: "DM Mono", monospace;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   writing-mode: vertical-rl;
   z-index: 3;
 }
 
+/* DIVIDER */
 .ns-divider {
+  width: min(1180px, calc(100vw - 3rem));
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  margin: 4rem 0 2.5rem;
+  margin: 4rem auto 2.5rem;
 }
 
 .ns-divider span {
-  font-family: monospace;
-  font-size: 0.72rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ns-mist);
@@ -155,51 +256,85 @@
 
 .ns-divider div {
   flex: 1;
-  height: 1px;
-  background: rgba(42,40,36,0.12);
+  height: 0.5px;
+  background: rgba(42, 40, 36, 0.12);
 }
 
+html[lang="ko"] .ns-divider span,
+:lang(ko) .ns-divider span {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* INTRO */
 .ns-intro {
-  max-width: 900px;
-  margin-bottom: 4rem;
+  width: min(1180px, calc(100vw - 3rem));
+  margin: 0 auto 4rem;
+  padding-top: 1rem;
 }
 
 .ns-pull-quote {
-  font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 400;
   font-style: italic;
   line-height: 1.55;
   color: var(--ns-rock);
   border-left: 2px solid var(--ns-sea);
   padding-left: 2rem;
   margin-bottom: 2rem;
+  max-width: 900px;
 }
 
 .ns-intro-body {
   font-size: 1rem;
   color: var(--ns-slate);
-  max-width: 64ch;
+  max-width: 62ch;
   padding-left: calc(2rem + 2px);
   line-height: 1.85;
 }
 
+html[lang="ko"] .ns-pull-quote,
+:lang(ko) .ns-pull-quote {
+  font-family: "Noto Serif KR", serif;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-style: normal;
+  line-height: 1.7;
+}
+
+html[lang="ko"] .ns-intro-body,
+:lang(ko) .ns-intro-body {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1rem;
+  line-height: 1.95;
+  max-width: 56ch;
+}
+
+/* CARDS */
 .ns-cards {
-  background: var(--ns-cream);
-  margin: 4rem calc(50% - 50vw);
-  padding: 4rem max(1.5rem, calc((100vw - 960px) / 2));
+  width: 100vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
+  margin: 4rem calc(50% - 50vw);
+  padding: 4rem max(2rem, calc((100vw - 1180px) / 2));
+  background: var(--ns-cream);
 }
 
 .ns-card {
   display: block;
-  padding: 2.25rem 2rem;
+  min-height: 260px;
+  padding: 2.5rem 2rem;
   background: var(--ns-white);
   color: inherit;
   text-decoration: none;
-  border: 1px solid rgba(42,40,36,0.10);
+  border: 0.5px solid rgba(42, 40, 36, 0.12);
   position: relative;
   overflow: hidden;
+  transition: all 0.2s;
 }
 
 .ns-card::after {
@@ -210,7 +345,11 @@
   width: 0;
   height: 2px;
   background: var(--ns-sea);
-  transition: width 0.3s;
+  transition: width 0.3s ease;
+}
+
+.ns-card:hover {
+  box-shadow: 0 4px 20px rgba(42, 40, 36, 0.06);
 }
 
 .ns-card:hover::after {
@@ -218,60 +357,87 @@
 }
 
 .ns-card-number {
-  font-family: monospace;
-  font-size: 0.68rem;
+  font-family: "DM Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
   color: var(--ns-mist);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .ns-card h2 {
-  font-size: 1.35rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
   margin-bottom: 0.75rem;
   color: var(--ns-rock);
 }
 
 .ns-card p {
+  font-size: 0.88rem;
   color: var(--ns-slate);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .ns-card span {
   display: inline-block;
-  margin-top: 1rem;
-  font-family: monospace;
+  margin-top: 1.25rem;
+  font-family: "DM Mono", monospace;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ns-sea);
 }
 
+html[lang="ko"] .ns-card h2,
+:lang(ko) .ns-card h2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+html[lang="ko"] .ns-card p,
+:lang(ko) .ns-card p {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* ABOUT */
 .ns-about {
+  width: min(1180px, calc(100vw - 3rem));
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 6rem;
   align-items: center;
-  margin: 5rem 0;
+  margin: 5rem auto;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .ns-label {
-  font-family: monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ns-mist);
-  margin-bottom: 1.25rem;
-}
-
-.ns-about h2 {
-  font-size: 2rem;
-  line-height: 1.25;
   margin-bottom: 1.5rem;
 }
 
+.ns-about h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--ns-rock);
+}
+
 .ns-about p {
+  font-size: 0.95rem;
   color: var(--ns-slate);
-  line-height: 1.85;
-  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 .ns-about aside {
@@ -280,19 +446,53 @@
 }
 
 .ns-about aside p {
+  font-family: "Playfair Display", Georgia, serif;
   font-size: 1.3rem;
   font-style: italic;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--ns-slate);
+  margin-bottom: 1rem;
 }
 
 .ns-about aside span {
-  font-family: monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  font-family: "DM Mono", monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
   color: var(--ns-mist);
 }
 
+html[lang="ko"] .ns-label,
+:lang(ko) .ns-label {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+html[lang="ko"] .ns-about h2,
+:lang(ko) .ns-about h2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.85rem;
+  line-height: 1.4;
+}
+
+html[lang="ko"] .ns-about p,
+:lang(ko) .ns-about p {
+  font-family: "Noto Serif KR", serif;
+  font-size: 0.98rem;
+  line-height: 1.95;
+}
+
+html[lang="ko"] .ns-about aside p,
+:lang(ko) .ns-about aside p {
+  font-family: "Noto Serif KR", serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .ns-hero {
     grid-template-columns: 1fr;
@@ -300,20 +500,33 @@
   }
 
   .ns-hero-left {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem 3rem;
+  }
+
+  .ns-title {
+    font-size: clamp(1.9rem, 9vw, 2.8rem);
+    max-width: 13ch;
+  }
+
+  html[lang="ko"] .ns-title,
+  :lang(ko) .ns-title {
+    font-size: clamp(2rem, 10vw, 3.1rem);
+    max-width: 13ch;
+  }
+
+  .ns-subtitle {
+    font-size: 0.95rem;
+    max-width: 100%;
   }
 
   .ns-hero-right {
-    min-height: 260px;
+    min-height: 340px;
   }
 
-  .ns-cards {
-    grid-template-columns: 1fr;
-  }
-
+  .ns-divider,
+  .ns-intro,
   .ns-about {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    width: min(100% - 3rem, 1180px);
   }
 
   .ns-intro-body {
@@ -322,187 +535,6 @@
 
   .ns-pull-quote {
     padding-left: 1.25rem;
-  }
-}
-/* ===== Newfoundland Saga landing refinements ===== */
-
-/* PaperMod 기본 폭 제한을 홈 화면에서만 넓게 풀기 */
-body.home .main {
-  max-width: none;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* 홈 화면 전체를 더 넓게 사용 */
-body.home .post-entry,
-body.home .first-entry,
-body.home .home-info {
-  max-width: none;
-}
-
-/* 랜딩 페이지 전용 폰트: 더 클래식한 serif 느낌 */
-.ns-hero,
-.ns-intro,
-.ns-cards,
-.ns-about {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-}
-
-/* 전체 랜딩 섹션을 화면 가득 사용 */
-.ns-hero {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  min-height: 86vh;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  border-left: none;
-  border-right: none;
-  border-top: 1px solid rgba(42, 40, 36, 0.08);
-  border-bottom: 1px solid rgba(42, 40, 36, 0.08);
-}
-
-/* 왼쪽 텍스트 박스를 더 넓게 */
-.ns-hero-left {
-  padding: 6rem max(3rem, calc((100vw - 1180px) / 2)) 6rem max(3rem, calc((100vw - 1180px) / 2));
-}
-
-/* 제목은 크지만 줄간격과 폭을 안정적으로 */
-.ns-title {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-  font-size: clamp(3.2rem, 6vw, 6.2rem);
-  line-height: 1.02;
-  letter-spacing: -0.045em;
-  max-width: 11ch;
-}
-
-/* 한국어 제목은 너무 좁지 않게 */
-html[lang="ko"] .ns-title,
-:lang(ko) .ns-title {
-  font-family: "Noto Serif KR", Georgia, serif;
-  font-size: clamp(2.6rem, 5vw, 4.8rem);
-  line-height: 1.22;
-  letter-spacing: -0.035em;
-  max-width: 12ch;
-}
-
-/* 부제는 더 넓게, 읽기 좋게 */
-.ns-subtitle {
-  font-size: clamp(1.1rem, 1.35vw, 1.35rem);
-  line-height: 1.75;
-  max-width: 52ch;
-}
-
-/* 오른쪽 이미지 영역을 더 시원하게 */
-.ns-hero-right {
-  min-height: 620px;
-}
-
-/* 인트로도 화면 폭을 더 활용 */
-.ns-divider,
-.ns-intro,
-.ns-about {
-  width: min(1180px, calc(100vw - 3rem));
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 인트로 문장 가독성 개선 */
-.ns-intro {
-  padding-top: 1rem;
-}
-
-.ns-pull-quote {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-  font-size: clamp(1.65rem, 2.8vw, 2.4rem);
-  line-height: 1.45;
-  max-width: 900px;
-}
-
-.ns-intro-body {
-  font-size: clamp(1.05rem, 1.2vw, 1.2rem);
-  line-height: 1.85;
-  max-width: 760px;
-}
-
-/* 카드 영역을 화면 가득 채우되 내부는 넓은 그리드 */
-.ns-cards {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 5rem max(2rem, calc((100vw - 1180px) / 2));
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-/* 카드 박스를 더 크게 */
-.ns-card {
-  min-height: 260px;
-  padding: 3rem 2.5rem;
-}
-
-.ns-card h2 {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-  font-size: clamp(1.55rem, 2vw, 2rem);
-  line-height: 1.25;
-}
-
-.ns-card p {
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
-/* About 영역도 더 넓고 안정적으로 */
-.ns-about {
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 6rem;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
-.ns-about h2 {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-  font-size: clamp(2rem, 3vw, 3rem);
-  line-height: 1.18;
-}
-
-.ns-about p {
-  font-size: 1.05rem;
-  line-height: 1.85;
-}
-
-.ns-about aside p {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-  font-size: clamp(1.35rem, 2vw, 1.9rem);
-  line-height: 1.55;
-}
-
-/* 모바일에서는 화면 가득 유지하되 여백 조정 */
-@media (max-width: 900px) {
-  .ns-hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .ns-hero-left {
-    padding: 4rem 1.5rem 3rem;
-  }
-
-  .ns-title {
-    font-size: clamp(2.6rem, 14vw, 4rem);
-    max-width: 12ch;
-  }
-
-  html[lang="ko"] .ns-title,
-  :lang(ko) .ns-title {
-    font-size: clamp(2.2rem, 11vw, 3.4rem);
-    max-width: 12ch;
-  }
-
-  .ns-subtitle {
-    max-width: 100%;
-  }
-
-  .ns-hero-right {
-    min-height: 340px;
   }
 
   .ns-cards {
@@ -519,18 +551,4 @@ html[lang="ko"] .ns-title,
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-}
-.ns-hero,
-.ns-intro,
-.ns-cards,
-.ns-about {
-  font-family: Georgia, "Times New Roman", "Noto Serif KR", serif;
-}
-/* Reduce hero title and subtitle size, but keep readability */
-.ns-title {
-  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
-}
-
-.ns-subtitle {
-  font-size: 0.85rem;
 }
