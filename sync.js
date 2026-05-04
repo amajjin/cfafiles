@@ -24,11 +24,26 @@ async function sync() {
     const date = props.Date?.date?.start || new Date().toISOString().split('T')[0];
     const tags = props.Tags?.multi_select?.map(t => t.name) || [];
     const categories = props.Categories?.multi_select?.map(c => c.name) || [];
-    const language = props.Language?.select?.name || 'en';
+    const raw= props.Language?.select?.name || 'en';
+
+    const languageMap = {
+      en: 'en',
+      english: 'en',
+      English: 'en',
+      ko: 'ko',
+      korean: 'ko',
+      Korean: 'ko',
+      한국어: 'ko'
+    };
+
+    const = languageMap[rawLanguage] || 'en';
 
     const slug = props.Slug?.rich_text[0]?.plain_text ||
                  title.replace(/\s+/g, '-').replace(/[^\p{L}\p{N}-]/gu, '').toLowerCase();
 
+const filename = === 'ko' ? `${slug}.ko.md` : `${slug}.md`;
+
+    const filename = === 'ko' ? `${slug}.ko.md` : `${slug}.md`;
     const mdBlocks = await n2m.pageToMarkdown(page.id);
     const mdContent = n2m.toMarkdownString(mdBlocks);
 
@@ -42,14 +57,14 @@ async function sync() {
       'draft: false',
       'tags: [' + tagStr + ']',
       'categories: [' + catStr + ']',
-      'language: "' + language + '"',
+      'language: "' + + '"',
       '---',
       ''
     ].join('\n');
 
-    const filePath = path.join('content', 'posts', slug + '.md');
+    const filePath = path.join(postsDir, filename);
     fs.writeFileSync(filePath, frontMatter + mdContent.parent);
-    console.log('Synced: ' + slug + '.md (lang: ' + language + ')');
+    console.log('Synced: ' + slug + '.md (lang: ' + + ')');
   }
 }
 
