@@ -739,3 +739,81 @@ body.dark .ns-about aside p,
 .dark .ns-about aside p {
   color: #ffffff !important;
 }
+/* Force dark mode for hero and cards */
+body.dark .ns-hero,
+.dark .ns-hero {
+  background: #0f0f0e !important;
+  color: #f7f3ea !important;
+  border-top-color: rgba(247, 243, 234, 0.18) !important;
+  border-bottom-color: rgba(247, 243, 234, 0.18) !important;
+}
+
+body.dark .ns-hero-left,
+.dark .ns-hero-left {
+  background: #0f0f0e !important;
+}
+
+body.dark .ns-eyebrow,
+.dark .ns-eyebrow {
+  color: #d8d3c8 !important;
+}
+
+body.dark .ns-title,
+.dark .ns-title {
+  color: #ffffff !important;
+}
+
+body.dark .ns-title em,
+.dark .ns-title em {
+  color: #9fc7dc !important;
+}
+
+body.dark .ns-subtitle,
+.dark .ns-subtitle {
+  color: #f0eee8 !important;
+}
+
+body.dark .ns-btn-primary,
+.dark .ns-btn-primary {
+  background: #f7f3ea !important;
+  color: #0f0f0e !important;
+}
+
+body.dark .ns-btn-secondary,
+.dark .ns-btn-secondary {
+  color: #9fc7dc !important;
+  border-bottom-color: #9fc7dc !important;
+}
+
+/* Force dark mode for card section */
+body.dark .ns-cards,
+.dark .ns-cards {
+  background: #0f0f0e !important;
+}
+
+body.dark .ns-card,
+.dark .ns-card {
+  background: #161615 !important;
+  color: #f7f3ea !important;
+  border-color: rgba(247, 243, 234, 0.18) !important;
+}
+
+body.dark .ns-card h2,
+.dark .ns-card h2 {
+  color: #ffffff !important;
+}
+
+body.dark .ns-card p,
+.dark .ns-card p {
+  color: #f0eee8 !important;
+}
+
+body.dark .ns-card-number,
+.dark .ns-card-number {
+  color: #c9c3b8 !important;
+}
+
+body.dark .ns-card span,
+.dark .ns-card span {
+  color: #9fc7dc !important;
+}
