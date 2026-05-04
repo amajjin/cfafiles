@@ -720,3 +720,73 @@ body.dark .ns-btn-primary,
   background: var(--primary) !important;
   color: var(--theme) !important;
 }
+
+/* Force dark mode for custom landing page - works with PaperMod auto dark mode */
+@media (prefers-color-scheme: dark) {
+  .ns-hero,
+  .ns-hero-left,
+  .ns-intro,
+  .ns-cards,
+  .ns-about {
+    background: #0f0f0e !important;
+    color: #f7f3ea !important;
+  }
+
+  .ns-card {
+    background: #161615 !important;
+    color: #f7f3ea !important;
+    border-color: rgba(247, 243, 234, 0.2) !important;
+  }
+
+  .ns-title,
+  .ns-card h2,
+  .ns-about h2,
+  .ns-pull-quote {
+    color: #ffffff !important;
+  }
+
+  .ns-title em,
+  .ns-card span,
+  .ns-btn-secondary {
+    color: #9fc7dc !important;
+  }
+
+  .ns-subtitle,
+  .ns-intro-body,
+  .ns-card p,
+  .ns-about p {
+    color: #f0eee8 !important;
+  }
+
+  .ns-eyebrow,
+  .ns-card-number,
+  .ns-label,
+  .ns-divider span {
+    color: #c9c3b8 !important;
+  }
+
+  .ns-pull-quote {
+    border-left-color: #9fc7dc !important;
+  }
+
+  .ns-btn-primary {
+    background: #f7f3ea !important;
+    color: #0f0f0e !important;
+  }
+
+  .ns-btn-secondary {
+    border-bottom-color: #9fc7dc !important;
+  }
+
+  .ns-divider div {
+    background: rgba(247, 243, 234, 0.22) !important;
+  }
+
+  .ns-about aside {
+    border-left-color: rgba(247, 243, 234, 0.25) !important;
+  }
+
+  .ns-about aside p {
+    color: #ffffff !important;
+  }
+}
