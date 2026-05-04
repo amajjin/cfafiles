@@ -1,14 +1,11 @@
 ---
-title: "케이플린 롤: 뉴펀들랜드의 한 주 (한글판)"
+title: "케이플린 롤: 뉴펀들랜드의 한 주"
 date: 2026-05-03
 draft: false
-tags: ["tradition"]
+tags: ["tradition", "food"]
 categories: ["culture"]
 language: "ko"
 ---
-
-_Slug: capelin-roll-newfoundland · 카테고리: Fish & Sea_
-
 
 ---
 
