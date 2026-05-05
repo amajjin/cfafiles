@@ -488,7 +488,7 @@ html[lang="ko"] .ns-card p,
 .ns-about aside {
   background: var(--ns-cream);
   border: 1px solid rgba(42, 40, 36, 0.1);
-  padding: 1.5rem 1.8rem;
+  padding: 1rem 1.5rem;
   margin-right: 8mm;
 }
 
