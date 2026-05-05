@@ -440,8 +440,8 @@ html[lang="ko"] .ns-card p,
 .ns-about {
   width: min(1180px, calc(100vw - 3rem));
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 6rem;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr);
+  gap: 4rem;
   align-items: center;
   margin: 5rem auto;
   padding-top: 2rem;
@@ -476,6 +476,7 @@ html[lang="ko"] .ns-card p,
 .ns-about aside {
   border-left: 2px solid var(--ns-fog);
   padding-left: 3rem;
+  margin-left: -1rem;
 }
 .ns-about > div {
   padding-right: 2.5rem;
