@@ -434,13 +434,14 @@ html[lang="ko"] .ns-card p,
 .ns-about {
   width: min(1180px, calc(100vw - 3rem));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.95fr);
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
   margin: 5rem auto;
   padding-top: 2rem;
   padding-bottom: 3rem;
-  padding-left: 1.8rem;
+  padding-left: clamp(0rem, 2vw, 1.8rem);
+
 }
 .ns-about > div {
   margin-left: -2rem;
