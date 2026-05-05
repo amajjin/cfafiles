@@ -477,6 +477,15 @@ html[lang="ko"] .ns-card p,
   border-left: 2px solid var(--ns-fog);
   padding-left: 3rem;
 }
+.ns-about > div {
+  padding-right: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .ns-about > div {
+    padding-right: 0;
+  }
+}
 
 .ns-about aside p {
   font-family: "Playfair Display", Georgia, serif;
