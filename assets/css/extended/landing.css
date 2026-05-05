@@ -446,6 +446,19 @@ html[lang="ko"] .ns-card p,
   margin-left: -2rem;
   padding-left: 2rem;
 }
+@media (max-width: 1100px) {
+  .ns-about {
+    padding-left: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+    gap: 3rem;
+  }
+
+  .ns-about > div {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
 .ns-label {
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.68rem;
@@ -599,6 +612,14 @@ html[lang="ko"] .ns-about aside p,
   .ns-about {
     grid-template-columns: 1fr;
     gap: 3rem;
+        padding-left: 0;
+  }
+
+  .ns-about > div {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
   }
 
   .ns-about aside {
