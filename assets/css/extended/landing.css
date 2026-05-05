@@ -3,7 +3,7 @@
 */
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=Noto+Serif+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,600..800,40,0&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
 
 :root {
   --ns-fog: #e8e6e1;
@@ -33,9 +33,28 @@ body.home .home-info {
 .ns-intro,
 .ns-cards,
 .ns-about {
-  font-family: "Source Serif 4", Georgia, serif;
-  font-weight: 300;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
   color: var(--ns-rock);
+}
+
+.ns-title,
+.ns-card h2,
+.ns-about h2,
+.ns-pull-quote {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.ns-eyebrow,
+.ns-btn-primary,
+.ns-btn-secondary,
+.ns-divider span,
+.ns-card-number,
+.ns-card span,
+.ns-label,
+.ns-about aside span {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
 }
 
 /* Korean typography */
@@ -47,7 +66,7 @@ html[lang="ko"] .ns-about,
 :lang(ko) .ns-intro,
 :lang(ko) .ns-cards,
 :lang(ko) .ns-about {
-  font-family: "Noto Serif KR", "Source Serif 4", Georgia, serif;
+  font-family: "Noto Sans KR", "Source Serif 4", Georgia, serif;
 }
 
 /* Prevent selected words from breaking awkwardly */
@@ -103,7 +122,7 @@ html[lang="ko"] .ns-about,
 /* Korean hero title */
 html[lang="ko"] .ns-title,
 :lang(ko) .ns-title {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: clamp(2.1rem, 3.8vw, 3.35rem);
   font-weight: 700;
   line-height: 1.25;
@@ -130,7 +149,7 @@ html[lang="ko"] .ns-title em,
 
 html[lang="ko"] .ns-subtitle,
 :lang(ko) .ns-subtitle {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 1.08rem;
   font-weight: 400;
   line-height: 1.85;
@@ -183,7 +202,7 @@ html[lang="ko"] .ns-btn-primary,
 html[lang="ko"] .ns-btn-secondary,
 :lang(ko) .ns-btn-primary,
 :lang(ko) .ns-btn-secondary {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 0.92rem;
   font-weight: 500;
   letter-spacing: 0;
@@ -268,7 +287,7 @@ html[lang="ko"] .ns-btn-secondary,
 
 html[lang="ko"] .ns-divider span,
 :lang(ko) .ns-divider span {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0;
@@ -305,7 +324,7 @@ html[lang="ko"] .ns-divider span,
 
 html[lang="ko"] .ns-pull-quote,
 :lang(ko) .ns-pull-quote {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: clamp(1.25rem, 2vw, 1.65rem);
   font-style: normal;
   line-height: 1.7;
@@ -315,7 +334,7 @@ html[lang="ko"] .ns-pull-quote,
 
 html[lang="ko"] .ns-intro-body,
 :lang(ko) .ns-intro-body {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 1rem;
   line-height: 1.95;
   max-width: 56ch;
@@ -401,7 +420,7 @@ html[lang="ko"] .ns-intro-body,
 
 html[lang="ko"] .ns-card h2,
 :lang(ko) .ns-card h2 {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 1.2rem;
   line-height: 1.4;
   word-break: keep-all;
@@ -410,7 +429,7 @@ html[lang="ko"] .ns-card h2,
 
 html[lang="ko"] .ns-card p,
 :lang(ko) .ns-card p {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 0.9rem;
   line-height: 1.75;
   word-break: keep-all;
@@ -477,7 +496,7 @@ html[lang="ko"] .ns-card p,
 
 html[lang="ko"] .ns-label,
 :lang(ko) .ns-label {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0;
@@ -486,7 +505,7 @@ html[lang="ko"] .ns-label,
 
 html[lang="ko"] .ns-about h2,
 :lang(ko) .ns-about h2 {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 1.85rem;
   line-height: 1.4;
   word-break: keep-all;
@@ -495,7 +514,7 @@ html[lang="ko"] .ns-about h2,
 
 html[lang="ko"] .ns-about p,
 :lang(ko) .ns-about p {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 0.98rem;
   line-height: 1.95;
   word-break: keep-all;
@@ -504,7 +523,7 @@ html[lang="ko"] .ns-about p,
 
 html[lang="ko"] .ns-about aside p,
 :lang(ko) .ns-about aside p {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Noto Sans KR", serif;
   font-size: 1.2rem;
   font-style: normal;
   line-height: 1.7;
