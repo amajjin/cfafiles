@@ -13,6 +13,14 @@
   --ns-sea: #2d4a5a;
   --ns-cream: #f5f2ec;
   --ns-white: #faf9f6;
+
+  --ns-dark-bg: #0f0f0e;
+  --ns-dark-card: #1f1f1d;
+  --ns-dark-card-hover: #252522;
+  --ns-dark-text: #f7f3ea;
+  --ns-dark-body: #f0eee8;
+  --ns-dark-muted: #ded7cb;
+  --ns-dark-accent: #9fc7dc;
 }
 
 /* Let the PaperMod home page use the full width */
@@ -38,25 +46,6 @@ body.home .home-info {
   color: var(--ns-rock);
 }
 
-.ns-title,
-.ns-card h2,
-.ns-about h2,
-.ns-pull-quote {
-  font-family: "Fraunces", Georgia, serif;
-}
-
-.ns-eyebrow,
-.ns-btn-primary,
-.ns-btn-secondary,
-.ns-divider span,
-.ns-card-number,
-.ns-card span,
-.ns-label,
-.ns-about aside span {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
-}
-
 /* Korean typography */
 html[lang="ko"] .ns-hero,
 html[lang="ko"] .ns-intro,
@@ -66,7 +55,7 @@ html[lang="ko"] .ns-about,
 :lang(ko) .ns-intro,
 :lang(ko) .ns-cards,
 :lang(ko) .ns-about {
-  font-family: "Noto Sans KR", "Source Serif 4", Georgia, serif;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 /* Prevent selected words from breaking awkwardly */
@@ -95,20 +84,21 @@ html[lang="ko"] .ns-about,
 }
 
 .ns-eyebrow {
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.7rem;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ns-mist);
   margin-bottom: 2rem;
 }
 
 .ns-title {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Fraunces", Georgia, serif;
   font-size: clamp(2.25rem, 3.8vw, 3.55rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
   margin-bottom: 1.5rem;
   color: var(--ns-rock);
   max-width: 16ch;
@@ -122,11 +112,11 @@ html[lang="ko"] .ns-about,
 /* Korean hero title */
 html[lang="ko"] .ns-title,
 :lang(ko) .ns-title {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: clamp(2.1rem, 3.8vw, 3.35rem);
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   max-width: 13em;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -140,7 +130,7 @@ html[lang="ko"] .ns-title em,
 
 .ns-subtitle {
   font-size: 1.08rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ns-slate);
   max-width: 48ch;
   margin-bottom: 3rem;
@@ -149,7 +139,6 @@ html[lang="ko"] .ns-title em,
 
 html[lang="ko"] .ns-subtitle,
 :lang(ko) .ns-subtitle {
-  font-family: "Noto Sans KR", serif;
   font-size: 1.08rem;
   font-weight: 400;
   line-height: 1.85;
@@ -168,9 +157,10 @@ html[lang="ko"] .ns-subtitle,
 
 .ns-btn-primary,
 .ns-btn-secondary {
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -179,7 +169,7 @@ html[lang="ko"] .ns-subtitle,
   color: var(--ns-white);
   background: var(--ns-rock);
   padding: 0.9rem 2rem;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .ns-btn-primary:hover {
@@ -202,9 +192,9 @@ html[lang="ko"] .ns-btn-primary,
 html[lang="ko"] .ns-btn-secondary,
 :lang(ko) .ns-btn-primary,
 :lang(ko) .ns-btn-secondary {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: 0.92rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -252,8 +242,9 @@ html[lang="ko"] .ns-btn-secondary,
   position: absolute;
   bottom: 2rem;
   right: 2rem;
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.65rem;
+  font-weight: 600;
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
@@ -271,9 +262,10 @@ html[lang="ko"] .ns-btn-secondary,
 }
 
 .ns-divider span {
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.68rem;
-  letter-spacing: 0.12em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ns-mist);
   white-space: nowrap;
@@ -287,9 +279,9 @@ html[lang="ko"] .ns-btn-secondary,
 
 html[lang="ko"] .ns-divider span,
 :lang(ko) .ns-divider span {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -302,11 +294,11 @@ html[lang="ko"] .ns-divider span,
 }
 
 .ns-pull-quote {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Fraunces", Georgia, serif;
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--ns-rock);
   border-left: 2px solid var(--ns-sea);
   padding-left: 2rem;
@@ -324,8 +316,9 @@ html[lang="ko"] .ns-divider span,
 
 html[lang="ko"] .ns-pull-quote,
 :lang(ko) .ns-pull-quote {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 600;
   font-style: normal;
   line-height: 1.7;
   word-break: keep-all;
@@ -334,7 +327,6 @@ html[lang="ko"] .ns-pull-quote,
 
 html[lang="ko"] .ns-intro-body,
 :lang(ko) .ns-intro-body {
-  font-family: "Noto Sans KR", serif;
   font-size: 1rem;
   line-height: 1.95;
   max-width: 56ch;
@@ -363,7 +355,7 @@ html[lang="ko"] .ns-intro-body,
   border: 0.5px solid rgba(42, 40, 36, 0.12);
   position: relative;
   overflow: hidden;
-  transition: all 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
 .ns-card::after {
@@ -386,18 +378,19 @@ html[lang="ko"] .ns-intro-body,
 }
 
 .ns-card-number {
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.65rem;
+  font-weight: 600;
   letter-spacing: 0.1em;
   color: var(--ns-mist);
   margin-bottom: 1.25rem;
 }
 
 .ns-card h2 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Fraunces", Georgia, serif;
   font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   margin-bottom: 0.75rem;
   color: var(--ns-rock);
 }
@@ -411,17 +404,19 @@ html[lang="ko"] .ns-intro-body,
 .ns-card span {
   display: inline-block;
   margin-top: 1.25rem;
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--ns-sea);
 }
 
 html[lang="ko"] .ns-card h2,
 :lang(ko) .ns-card h2 {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: 1.2rem;
+  font-weight: 700;
   line-height: 1.4;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -429,7 +424,6 @@ html[lang="ko"] .ns-card h2,
 
 html[lang="ko"] .ns-card p,
 :lang(ko) .ns-card p {
-  font-family: "Noto Sans KR", serif;
   font-size: 0.9rem;
   line-height: 1.75;
   word-break: keep-all;
@@ -440,7 +434,7 @@ html[lang="ko"] .ns-card p,
 .ns-about {
   width: min(1180px, calc(100vw - 3rem));
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.95fr);
   gap: 4rem;
   align-items: center;
   margin: 5rem auto;
@@ -449,16 +443,17 @@ html[lang="ko"] .ns-card p,
 }
 
 .ns-label {
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ns-mist);
   margin-bottom: 1.5rem;
 }
 
 .ns-about h2 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Fraunces", Georgia, serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
@@ -474,21 +469,15 @@ html[lang="ko"] .ns-card p,
 }
 
 .ns-about aside {
-  border-left: none;
   background: var(--ns-cream);
-  padding: 2.5rem 2.75rem;
-  margin-left: 0;
-}
-
-@media (max-width: 900px) {
-  .ns-about aside {
-    padding: 2rem;
-  }
+  border: 1px solid rgba(42, 40, 36, 0.1);
+  padding: 2.75rem 3rem;
 }
 
 .ns-about aside p {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Fraunces", Georgia, serif;
   font-size: 1.3rem;
+  font-weight: 600;
   font-style: italic;
   line-height: 1.5;
   color: var(--ns-slate);
@@ -496,25 +485,27 @@ html[lang="ko"] .ns-card p,
 }
 
 .ns-about aside span {
-  font-family: "DM Mono", monospace;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   color: var(--ns-mist);
 }
 
 html[lang="ko"] .ns-label,
 :lang(ko) .ns-label {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
 }
 
 html[lang="ko"] .ns-about h2,
 :lang(ko) .ns-about h2 {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: 1.85rem;
+  font-weight: 700;
   line-height: 1.4;
   word-break: keep-all;
   overflow-wrap: normal;
@@ -522,7 +513,6 @@ html[lang="ko"] .ns-about h2,
 
 html[lang="ko"] .ns-about p,
 :lang(ko) .ns-about p {
-  font-family: "Noto Sans KR", serif;
   font-size: 0.98rem;
   line-height: 1.95;
   word-break: keep-all;
@@ -531,8 +521,9 @@ html[lang="ko"] .ns-about p,
 
 html[lang="ko"] .ns-about aside p,
 :lang(ko) .ns-about aside p {
-  font-family: "Noto Sans KR", serif;
+  font-family: "Noto Sans KR", system-ui, sans-serif;
   font-size: 1.2rem;
+  font-weight: 500;
   font-style: normal;
   line-height: 1.7;
   word-break: keep-all;
@@ -604,6 +595,10 @@ html[lang="ko"] .ns-about aside p,
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
+  .ns-about aside {
+    padding: 2rem;
+  }
 }
 
 /* Extra small phones */
@@ -647,7 +642,7 @@ html[lang="ko"] .ns-about aside p,
   }
 }
 
-/* DARK MODE: PaperMod auto mode + manual toggle */
+/* DARK MODE: PaperMod manual toggle */
 body.dark .ns-hero,
 .dark .ns-hero,
 [data-theme="dark"] .ns-hero,
@@ -663,23 +658,26 @@ body.dark .ns-cards,
 body.dark .ns-about,
 .dark .ns-about,
 [data-theme="dark"] .ns-about {
-  background: #0f0f0e !important;
-  color: #f7f3ea !important;
+  background: var(--ns-dark-bg) !important;
+  color: var(--ns-dark-text) !important;
 }
 
 body.dark .ns-card,
 .dark .ns-card,
-[data-theme="dark"] .ns-card {
-  background: #1f1f1d !important;
-  color: #f7f3ea !important;
-  border-color: rgba(247, 243, 234, 0.28) !important;
+[data-theme="dark"] .ns-card,
+body.dark .ns-about aside,
+.dark .ns-about aside,
+[data-theme="dark"] .ns-about aside {
+  background: var(--ns-dark-card) !important;
+  color: var(--ns-dark-text) !important;
+  border: 1px solid rgba(247, 243, 234, 0.22) !important;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
 }
 
 body.dark .ns-card:hover,
 .dark .ns-card:hover,
 [data-theme="dark"] .ns-card:hover {
-  background: #252522 !important;
+  background: var(--ns-dark-card-hover) !important;
   box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
 }
 
@@ -707,7 +705,7 @@ body.dark .ns-card span,
 body.dark .ns-btn-secondary,
 .dark .ns-btn-secondary,
 [data-theme="dark"] .ns-btn-secondary {
-  color: #9fc7dc !important;
+  color: var(--ns-dark-accent) !important;
 }
 
 body.dark .ns-subtitle,
@@ -721,8 +719,11 @@ body.dark .ns-card p,
 [data-theme="dark"] .ns-card p,
 body.dark .ns-about p,
 .dark .ns-about p,
-[data-theme="dark"] .ns-about p {
-  color: #f0eee8 !important;
+[data-theme="dark"] .ns-about p,
+body.dark .ns-about aside p,
+.dark .ns-about aside p,
+[data-theme="dark"] .ns-about aside p {
+  color: var(--ns-dark-body) !important;
 }
 
 body.dark .ns-eyebrow,
@@ -740,33 +741,33 @@ body.dark .ns-divider span,
 body.dark .ns-about aside span,
 .dark .ns-about aside span,
 [data-theme="dark"] .ns-about aside span {
-  color: #ded7cb !important;
+  color: var(--ns-dark-muted) !important;
 }
 
 body.dark .ns-pull-quote,
 .dark .ns-pull-quote,
 [data-theme="dark"] .ns-pull-quote {
-  border-left-color: #9fc7dc !important;
+  border-left-color: var(--ns-dark-accent) !important;
 }
 
 body.dark .ns-btn-primary,
 .dark .ns-btn-primary,
 [data-theme="dark"] .ns-btn-primary {
-  background: #f7f3ea !important;
-  color: #0f0f0e !important;
+  background: var(--ns-dark-text) !important;
+  color: var(--ns-dark-bg) !important;
 }
 
 body.dark .ns-btn-primary:hover,
 .dark .ns-btn-primary:hover,
 [data-theme="dark"] .ns-btn-primary:hover {
-  background: #9fc7dc !important;
-  color: #0f0f0e !important;
+  background: var(--ns-dark-accent) !important;
+  color: var(--ns-dark-bg) !important;
 }
 
 body.dark .ns-btn-secondary,
 .dark .ns-btn-secondary,
 [data-theme="dark"] .ns-btn-secondary {
-  border-bottom-color: #9fc7dc !important;
+  border-bottom-color: var(--ns-dark-accent) !important;
 }
 
 body.dark .ns-divider div,
@@ -775,38 +776,27 @@ body.dark .ns-divider div,
   background: rgba(247, 243, 234, 0.28) !important;
 }
 
-body.dark .ns-about aside,
-.dark .ns-about aside,
-[data-theme="dark"] .ns-about aside {
-  border-left-color: rgba(247, 243, 234, 0.28) !important;
-}
-
-body.dark .ns-about aside p,
-.dark .ns-about aside p,
-[data-theme="dark"] .ns-about aside p {
-  color: #ffffff !important;
-}
-
-/* Also support browser/OS dark mode */
+/* DARK MODE: browser / OS auto mode */
 @media (prefers-color-scheme: dark) {
   .ns-hero,
   .ns-hero-left,
   .ns-intro,
   .ns-cards,
   .ns-about {
-    background: #0f0f0e !important;
-    color: #f7f3ea !important;
+    background: var(--ns-dark-bg) !important;
+    color: var(--ns-dark-text) !important;
   }
 
-  .ns-card {
-    background: #1f1f1d !important;
-    color: #f7f3ea !important;
-    border-color: rgba(247, 243, 234, 0.28) !important;
+  .ns-card,
+  .ns-about aside {
+    background: var(--ns-dark-card) !important;
+    color: var(--ns-dark-text) !important;
+    border: 1px solid rgba(247, 243, 234, 0.22) !important;
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
   }
 
   .ns-card:hover {
-    background: #252522 !important;
+    background: var(--ns-dark-card-hover) !important;
     box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
   }
 
@@ -820,14 +810,15 @@ body.dark .ns-about aside p,
   .ns-title em,
   .ns-card span,
   .ns-btn-secondary {
-    color: #9fc7dc !important;
+    color: var(--ns-dark-accent) !important;
   }
 
   .ns-subtitle,
   .ns-intro-body,
   .ns-card p,
-  .ns-about p {
-    color: #f0eee8 !important;
+  .ns-about p,
+  .ns-about aside p {
+    color: var(--ns-dark-body) !important;
   }
 
   .ns-eyebrow,
@@ -835,37 +826,28 @@ body.dark .ns-about aside p,
   .ns-label,
   .ns-divider span,
   .ns-about aside span {
-    color: #ded7cb !important;
+    color: var(--ns-dark-muted) !important;
   }
 
   .ns-pull-quote {
-    border-left-color: #9fc7dc !important;
+    border-left-color: var(--ns-dark-accent) !important;
   }
 
   .ns-btn-primary {
-    background: #f7f3ea !important;
-    color: #0f0f0e !important;
+    background: var(--ns-dark-text) !important;
+    color: var(--ns-dark-bg) !important;
   }
 
   .ns-btn-primary:hover {
-    background: #9fc7dc !important;
-    color: #0f0f0e !important;
+    background: var(--ns-dark-accent) !important;
+    color: var(--ns-dark-bg) !important;
   }
 
   .ns-btn-secondary {
-    border-bottom-color: #9fc7dc !important;
+    border-bottom-color: var(--ns-dark-accent) !important;
   }
 
   .ns-divider div {
     background: rgba(247, 243, 234, 0.28) !important;
-  }
-
-  .ns-about aside {
-      background: #1f1f1d !important;
-    border: 1px solid rgba(247, 243, 234, 0.22) !important;
-  }
-
-  .ns-about aside p {
-    color: #ffffff !important;
   }
 }
