@@ -2,8 +2,8 @@
 title: "뉴펀들랜드 오징어 이야기"
 date: 2026-04-26
 draft: false
-tags: []
-categories: []
+tags: ["food"]
+categories: ["nature"]
 language: "ko"
 ---
 
