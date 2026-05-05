@@ -441,7 +441,10 @@ html[lang="ko"] .ns-card p,
   padding-top: 2rem;
   padding-bottom: 3rem;
 }
-
+.ns-about > div {
+  margin-left: -1cm;
+  padding-left: 1cm;
+}
 .ns-label {
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.68rem;
