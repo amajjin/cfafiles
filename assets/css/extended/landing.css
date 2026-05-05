@@ -1,7 +1,8 @@
 /* Newfoundland Saga landing page for PaperMod
    Safe custom home layout using layouts/partials/home_info.html
 */
-
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,600..800,40,0&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
 /* Colour variables only */
 :root {
   --ns-fog: #e8e6e1;
@@ -26,18 +27,54 @@ body.home .home-info {
   max-width: none;
 }
 
-/* Use PaperMod typography */
+/* Custom landing typography */
 .ns-hero,
 .ns-intro,
 .ns-cards,
-.ns-about,
-.ns-hero *,
-.ns-intro *,
-.ns-cards *,
-.ns-about * {
-  font-family: inherit;
+.ns-about {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+.ns-title,
+.ns-card h2,
+.ns-about h2,
+.ns-pull-quote,
+.ns-about aside p {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+.ns-eyebrow,
+.ns-btn-primary,
+.ns-btn-secondary,
+.ns-divider span,
+.ns-card-number,
+.ns-card span,
+.ns-label,
+.ns-about aside span {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Korean typography */
+html[lang="ko"] .ns-hero,
+html[lang="ko"] .ns-intro,
+html[lang="ko"] .ns-cards,
+html[lang="ko"] .ns-about,
+:lang(ko) .ns-hero,
+:lang(ko) .ns-intro,
+:lang(ko) .ns-cards,
+:lang(ko) .ns-about,
+html[lang="ko"] .ns-title,
+:lang(ko) .ns-title,
+html[lang="ko"] .ns-card h2,
+:lang(ko) .ns-card h2,
+html[lang="ko"] .ns-about h2,
+:lang(ko) .ns-about h2,
+html[lang="ko"] .ns-pull-quote,
+:lang(ko) .ns-pull-quote,
+html[lang="ko"] .ns-about aside p,
+:lang(ko) .ns-about aside p {
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
 /* Prevent selected words from breaking awkwardly */
 .nowrap {
   white-space: nowrap;
