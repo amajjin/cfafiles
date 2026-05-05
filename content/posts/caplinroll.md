@@ -13,10 +13,13 @@ _Slug: capelin-roll-newfoundland · Category: Fish & Sea · Tags: capelin, capel
 ---
 
 
+![image.jpeg](/images/caplinroll/image-1-0636d122.jpg)
+
+
 For one week, sometimes two, in late June or early July, the beaches along Newfoundland's east coast fill with people carrying buckets, dip nets, and pillowcases. They walk down to the water at high tide, often after dark, and stand at the edge of the surf. Within minutes, the surf is no longer water. It is fish — millions of them, packed shoulder to shoulder, riding the incoming waves and beaching themselves on the sand to spawn.
 
 
-![image.jpeg](/images/caplinroll/image-1-56d843f5.jpg)
+![image.jpeg](/images/caplinroll/image-2-56d843f5.jpg)
 
 
 This is the capelin roll. It is the most reliable mass-spawning event in the Newfoundland calendar, the moment when the entire offshore food web compresses itself onto a strip of beach a few metres wide, and the moment when the rest of the province — cod, whales, seabirds, and people — comes to collect.
@@ -28,16 +31,25 @@ Almost everything on this coast connects, in one way or another, to what those f
 ## What the Fish Is
 
 
-![image.jpeg](/images/caplinroll/image-2-a4567de1.jpg)
+![image.jpeg](/images/caplinroll/image-3-a4567de1.jpg)
 
 
 Capelin (_Mallotus villosus_) are small smelt-family fish, 15–20 cm long, olive on the back and silver on the sides. Hold one up and it does not look like much. There are several reasons it is one of the most important fish in the North Atlantic.
 
 
+![image.jpeg](/images/caplinroll/image-4-91462513.jpg)
+
+
 The first is volume. Capelin live three to five years, grow fast, reproduce in extraordinary numbers, and die at high rates after spawning. A single female releases six to twelve thousand eggs in a season. Multiplied across a population that can run into the tens of billions, the result is a wall of biomass that nothing else in the ecosystem can match.
 
 
+![image.jpeg](/images/caplinroll/image-5-cb9c0587.jpg)
+
+
 The second is position. Capelin sit in the middle of the food web — they eat plankton, and almost everything bigger eats them. Cod. Humpback whales. Harp seals. Squid. Puffins, murres, gannets, kittiwakes. The list is long, and the dependency is one-way. The predators that define this coast either follow capelin during the spawning season or have life cycles tuned to capelin abundance. Without the small silver fish in the middle, the apex animals on top do not have a stable base.
+
+
+![image.jpeg](/images/caplinroll/image-6-c9f90481.jpg)
 
 
 The third is the way capelin connect things that would otherwise be separate. The cold offshore current and the warm inshore beach. The plankton bloom and the cod fishery. The arriving icebergs and the spawning surf. The science of the fish and the household memory of a generation that grew up scooping it out of the waves. Every layer of the system passes through capelin at some point in the year.
@@ -50,9 +62,6 @@ That is what makes them worth a long look.
 
 
 The reason capelin can spawn here at all is the same reason icebergs reach this coast.
-
-
-![image.jpeg](/images/caplinroll/image-3-cb9c0587.jpg)
 
 
 The Labrador Current carries Arctic and Labrador-Sea water southward along Newfoundland's east coast, holding annual sea temperatures roughly 7–10 °C below what the latitude would otherwise produce. Without it, the inshore water in summer would be too warm for capelin spawning, which has a fairly narrow optimal range of 6–10 °C. The current is what keeps the door open.
@@ -68,6 +77,9 @@ The same cold water that brings the icebergs brings the fish. The same cold wate
 
 
 ## The Migration Inshore
+
+
+![image.jpeg](/images/caplinroll/image-7-9010d416.jpg)
 
 
 In late spring, mature capelin begin a coordinated migration from the offshore feeding grounds to the inshore spawning beaches — a journey of more than 350 km in some cases.
@@ -124,6 +136,9 @@ Compare it to mummering, which had to be banned for over a century, then revived
 That is also, of course, what makes the recent decades so worrying.
 
 
+![image.jpeg](/images/caplinroll/image-8-78915455.jpg)
+
+
 ## The Collapse
 
 
@@ -140,6 +155,9 @@ The cultural consequences are quieter and harder to measure, but they are real. 
 
 
 A custom that survived industrial fishing, the cod collapse, the emptying of the outports, and the digital age is now being thinned out, slowly, by the disappearance of the species itself. The thread that ran through everything is fraying in the middle.
+
+
+![image.jpeg](/images/caplinroll/image-9-a138d0a6.jpg)
 
 
 ## The Seal Question
