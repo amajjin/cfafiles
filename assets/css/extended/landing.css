@@ -440,6 +440,7 @@ html[lang="ko"] .ns-card p,
   margin: 5rem auto;
   padding-top: 2rem;
   padding-bottom: 3rem;
+  padding-left: 30px;
 }
 .ns-about > div {
   margin-left: -1cm;
