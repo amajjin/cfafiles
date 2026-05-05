@@ -717,3 +717,214 @@ html[lang="ko"] .ns-about aside p,
     background: rgba(247, 243, 234, 0.28) !important;
   }
 }
+/* DARK MODE: PaperMod manual toggle + OS auto mode */
+
+/* 1) PaperMod manual dark toggle */
+body.dark .ns-hero,
+body.dark .ns-hero-left,
+body.dark .ns-intro,
+body.dark .ns-cards,
+body.dark .ns-about,
+.dark .ns-hero,
+.dark .ns-hero-left,
+.dark .ns-intro,
+.dark .ns-cards,
+.dark .ns-about,
+[data-theme="dark"] .ns-hero,
+[data-theme="dark"] .ns-hero-left,
+[data-theme="dark"] .ns-intro,
+[data-theme="dark"] .ns-cards,
+[data-theme="dark"] .ns-about {
+  background: #0f0f0e !important;
+  color: #f7f3ea !important;
+}
+
+body.dark .ns-card,
+.dark .ns-card,
+[data-theme="dark"] .ns-card,
+body.dark .ns-about aside,
+.dark .ns-about aside,
+[data-theme="dark"] .ns-about aside {
+  background: #1f1f1d !important;
+  color: #f7f3ea !important;
+  border: 1px solid rgba(247, 243, 234, 0.22) !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark .ns-card:hover,
+.dark .ns-card:hover,
+[data-theme="dark"] .ns-card:hover {
+  background: #252522 !important;
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
+}
+
+body.dark .ns-title,
+.dark .ns-title,
+[data-theme="dark"] .ns-title,
+body.dark .ns-card h2,
+.dark .ns-card h2,
+[data-theme="dark"] .ns-card h2,
+body.dark .ns-about h2,
+.dark .ns-about h2,
+[data-theme="dark"] .ns-about h2,
+body.dark .ns-pull-quote,
+.dark .ns-pull-quote,
+[data-theme="dark"] .ns-pull-quote,
+body.dark .ns-about aside p,
+.dark .ns-about aside p,
+[data-theme="dark"] .ns-about aside p {
+  color: #ffffff !important;
+}
+
+body.dark .ns-title em,
+.dark .ns-title em,
+[data-theme="dark"] .ns-title em,
+body.dark .ns-card span,
+.dark .ns-card span,
+[data-theme="dark"] .ns-card span,
+body.dark .ns-btn-secondary,
+.dark .ns-btn-secondary,
+[data-theme="dark"] .ns-btn-secondary {
+  color: #9fc7dc !important;
+}
+
+body.dark .ns-subtitle,
+.dark .ns-subtitle,
+[data-theme="dark"] .ns-subtitle,
+body.dark .ns-intro-body,
+.dark .ns-intro-body,
+[data-theme="dark"] .ns-intro-body,
+body.dark .ns-card p,
+.dark .ns-card p,
+[data-theme="dark"] .ns-card p,
+body.dark .ns-about p,
+.dark .ns-about p,
+[data-theme="dark"] .ns-about p {
+  color: #f0eee8 !important;
+}
+
+body.dark .ns-eyebrow,
+.dark .ns-eyebrow,
+[data-theme="dark"] .ns-eyebrow,
+body.dark .ns-card-number,
+.dark .ns-card-number,
+[data-theme="dark"] .ns-card-number,
+body.dark .ns-label,
+.dark .ns-label,
+[data-theme="dark"] .ns-label,
+body.dark .ns-divider span,
+.dark .ns-divider span,
+[data-theme="dark"] .ns-divider span,
+body.dark .ns-about aside span,
+.dark .ns-about aside span,
+[data-theme="dark"] .ns-about aside span {
+  color: #ded7cb !important;
+}
+
+body.dark .ns-pull-quote,
+.dark .ns-pull-quote,
+[data-theme="dark"] .ns-pull-quote {
+  border-left-color: #9fc7dc !important;
+}
+
+body.dark .ns-btn-primary,
+.dark .ns-btn-primary,
+[data-theme="dark"] .ns-btn-primary {
+  background: #f7f3ea !important;
+  color: #0f0f0e !important;
+}
+
+body.dark .ns-btn-primary:hover,
+.dark .ns-btn-primary:hover,
+[data-theme="dark"] .ns-btn-primary:hover {
+  background: #9fc7dc !important;
+  color: #0f0f0e !important;
+}
+
+body.dark .ns-btn-secondary,
+.dark .ns-btn-secondary,
+[data-theme="dark"] .ns-btn-secondary {
+  border-bottom-color: #9fc7dc !important;
+}
+
+body.dark .ns-divider div,
+.dark .ns-divider div,
+[data-theme="dark"] .ns-divider div {
+  background: rgba(247, 243, 234, 0.28) !important;
+}
+
+/* 2) Browser / OS automatic dark mode */
+@media (prefers-color-scheme: dark) {
+  .ns-hero,
+  .ns-hero-left,
+  .ns-intro,
+  .ns-cards,
+  .ns-about {
+    background: #0f0f0e !important;
+    color: #f7f3ea !important;
+  }
+
+  .ns-card,
+  .ns-about aside {
+    background: #1f1f1d !important;
+    color: #f7f3ea !important;
+    border: 1px solid rgba(247, 243, 234, 0.22) !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .ns-card:hover {
+    background: #252522 !important;
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  .ns-title,
+  .ns-card h2,
+  .ns-about h2,
+  .ns-pull-quote,
+  .ns-about aside p {
+    color: #ffffff !important;
+  }
+
+  .ns-title em,
+  .ns-card span,
+  .ns-btn-secondary {
+    color: #9fc7dc !important;
+  }
+
+  .ns-subtitle,
+  .ns-intro-body,
+  .ns-card p,
+  .ns-about p {
+    color: #f0eee8 !important;
+  }
+
+  .ns-eyebrow,
+  .ns-card-number,
+  .ns-label,
+  .ns-divider span,
+  .ns-about aside span {
+    color: #ded7cb !important;
+  }
+
+  .ns-pull-quote {
+    border-left-color: #9fc7dc !important;
+  }
+
+  .ns-btn-primary {
+    background: #f7f3ea !important;
+    color: #0f0f0e !important;
+  }
+
+  .ns-btn-primary:hover {
+    background: #9fc7dc !important;
+    color: #0f0f0e !important;
+  }
+
+  .ns-btn-secondary {
+    border-bottom-color: #9fc7dc !important;
+  }
+
+  .ns-divider div {
+    background: rgba(247, 243, 234, 0.28) !important;
+  }
+}
