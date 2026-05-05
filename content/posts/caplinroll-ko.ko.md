@@ -1,5 +1,5 @@
 ---
-title: "케이플린 롤: 뉴펀들랜드 바다가 해변으로 올라오는 밤"
+title: "케이플린 롤: 뉴펀들랜드의 모두가 바다로 올때"
 date: 2026-05-03
 draft: false
 tags: ["tradition", "food"]
@@ -7,7 +7,7 @@ categories: ["culture", "nature"]
 language: "ko"
 ---
 
-# 케이플린 롤: 뉴펀들랜드 바다가 해변으로 올라오는 밤
+# 
 
 
 ![image.jpeg](/images/caplinroll-ko/image-1-0636d122.jpg)

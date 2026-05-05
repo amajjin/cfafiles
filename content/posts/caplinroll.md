@@ -1,5 +1,5 @@
 ---
-title: "The Capelin Roll: The Week Newfoundland Stops Everything"
+title: "The Capelin Roll: When the Newfoundland Comes Ashore"
 date: 2026-05-03
 draft: false
 tags: ["tradition", "food"]
@@ -10,7 +10,7 @@ language: "en"
 _Slug: capelin-roll-newfoundland · Category: Fish & Sea · Tags: capelin, capelin roll, Newfoundland fishery, Mallotus villosus, marine ecology, Iceberg Alley_
 
 
-# The Capelin Roll: When the Newfoundland Sea Comes Ashore
+# 
 
 
 ![image.jpeg](/images/caplinroll/image-1-0636d122.jpg)
