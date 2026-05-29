@@ -28,10 +28,10 @@ The caplin roll is the moment when Newfoundland’s land and sea meet at the sam
 ## The Small Fish in the Middle
 
 
-![3ecbdaa4-72f5-4146-8d9e-79a4db187996.png](/images/caplinroll/image-2-d3e587a6.png)
-
-
 The caplin (_Mallotus villosus_) is a small smelt-family fish, usually 15–20 cm long, olive on the back and silver along the sides. One fish in the hand does not look like much.
+
+
+![507617387_10233673127984458_1615816032733524407_n.jpg](/images/caplinroll/image-2-540683ad.jpg)
 
 
 But in Newfoundland waters, this small fish sits in the middle of the food web. Caplin eat zooplankton, and almost everything larger eats caplin: cod, humpback whales, harp seals, squid, puffins, murres, gulls, people, and even, through fertilizer, potato gardens. Many of the animals that define this coast depend, in one way or another, on the season of caplin.

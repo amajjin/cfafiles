@@ -28,7 +28,7 @@ language: "ko"
 ## 케이플린이라는 작은 물고기
 
 
-![물고기의 파도](/images/caplinroll-ko/image-2-d3e587a6.png)
+![507617387_10233673127984458_1615816032733524407_n.jpg](/images/caplinroll-ko/image-2-540683ad.jpg)
 
 
 케이플린(_Mallotus villosus_)은 빙어과의 작은 물고기다. 몸길이는 보통 15–20cm 남짓이고, 등은 올리브색, 옆면은 은빛이다. 한 마리만 보면 특별해 보이지 않는다.
